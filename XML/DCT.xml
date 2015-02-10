@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<DCTOrderRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.doody.com/ws/xsd/dct/DCTOrderRequest.xsd">
+  <Customer>
+    <ID>005034</ID>
+    <DistributorCustomerID>005034</DistributorCustomerID>
+    <Firstname>Stephen</Firstname>
+    <Lastname>Croce</Lastname>
+    <Affiliation>Technotects</Affiliation>
+    <BillingAddress1>1223Test</BillingAddress1>
+    <BillingAddress2>123Test</BillingAddress2>
+    <BillingCity>TESTCity</BillingCity>
+    <BillingState>PA</BillingState>
+    <BillingCountry>USA</BillingCountry>
+    <BillingPostalCode>12345</BillingPostalCode>
+    <Phone>215-867-5309</Phone>
+    <Fax>215-867-5309</Fax>
+    <Email>StephenCroce@technotects.com</Email>
+    <Login>
+      <LoginID>LOGIN</LoginID>
+      <Password>PASSWORD</Password>
+    </Login>
+  </Customer>
+  <Order>
+    <Edition>2011</Edition>
+    <PurchaseDate>2011-07-18</PurchaseDate>
+    <NotifyOthers>true</NotifyOthers>
+    <ProductID>50</ProductID>
+    <StandingOrder>Y</StandingOrder>
+  </Order>
+</DCTOrderRequest>

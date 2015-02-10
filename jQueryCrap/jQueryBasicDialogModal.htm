@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery UI Dialog - Basic modal</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="/resources/demos/external/jquery.bgiframe-2.1.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script>
+        
+//        $(function () {
+//            $("#dialog-modal").dialog({
+//                height: 140,
+//                modal: true
+//            });
+//        });
+
+        function hello() {
+            //window.alert('hi');
+            //$(function () {
+            $("#dialog-modal").dialog({
+                height: 140,
+                modal: true
+            });
+            //});
+        }
+    </script>
+</head>
+<body>
+ i want to <a href="#" onclick="hello();">click here</a> to open it.
+<div id="dialog-modal" title="yippeee - Basic modal dialog" style="display:none;">
+    <p>Adding the modal overlay screen makes the dialog look more prominent because it dims out the page content.</p>
+</div>
+ 
+<!--<p>Sed vel diam id libero <a href="http://example.com">rutrum convallis</a>. Donec aliquet leo vel magna. Phasellus rhoncus faucibus ante. Etiam bibendum, enim faucibus aliquet rhoncus, arcu felis ultricies neque, sit amet auctor elit eros a lectus.</p>-->
+ 
+ 
+</body>
+</html>

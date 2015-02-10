@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<books>
+  <Book>
+    <Title>MyBook</Title>
+    <Author>Croce</Author>
+    <isbn>123456</isbn>
+
+  </Book>
+  <Book>
+    <Title>MyBook1</Title>
+    <Author>Maria</Author>
+    <isbn>123456</isbn>
+
+  </Book>
+  <Book>
+    <Title>MyBook2</Title>
+    <Author>Pollack</Author>
+    <isbn>123456</isbn>
+
+  </Book>
+  <Book>
+    <Title>MyBook3</Title>
+    <Author>Sherlock</Author>
+    <isbn>123456</isbn>
+
+  </Book>
+</books>

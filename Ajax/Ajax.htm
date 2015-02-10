@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script language="javascript">
+        //http://www.w3schools.com/ajax/ajax_xmlhttprequest_create.asp
+        //The keystone of AJAX is the XMLHttpRequest object.
+
+        function loadXMLDoc1() {
+//            window.alert('loadXMLDoc1');
+            
+
+            //1.  create a variable to hold the xmlhttp object
+            var xmlhttp;
+            
+            //2.  make sure that the browser supports XMLHttp requests and if so, instantiate it.
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            //3.  when a POST/GET request is made by the browser, listen for the readystate change of the xmlHttp object.  When it becomes 4 and the status is 200, then execute stuff:
+            xmlhttp.onreadystatechange = function () {
+                //window.alert(xmlhttp.readyState);  //watch the ready state cycle through its 5 (0-4) states.
+                if (xmlhttp.readyState == 3) {
+                    //window.alert('it is ' + xmlhttp.readyState)
+                }
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    //If the response from the server is not XML, use the responseText property.  There is also a responseXML property.
+                    document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+
+                }
+            };
+            //To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
+            //xmlhttp.open("GET", "ajax_info.txt", true);  //this works
+            //xmlhttp.open("GET", "http://www.eyecarebusiness.com/Test.aspx", true);   //this didn't work
+            //xmlhttp.open("GET", "ajaxReturn.aspx", true);  //this works.
+
+            //A simple POST request:
+            xmlhttp.open("POST", "ajaxReturn.aspx?writeYourName=true", true);  //this works.
+            xmlhttp.send();
+
+
+            //            //To POST data like an HTML form, add an HTTP header with setRequestHeader(). 
+            //            //Specify the data you want to send in the send() method:
+            //            xmlhttp.open("POST", "ajaxReturn.aspx", true);
+            //            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            //            xmlhttp.send("writeYourName=true");   //hmmm, this doesn't seem to want to work.
+
+
+
+
+
+
+        }
+        function writeTime() {
+
+            //window.alert('hello');
+            var now = new Date();
+            //now.format("dd/M/yy h:mm tt"); //Edit: changed TT to tt
+            //window.alert(now);
+            document.getElementById("div").innerHTML = now;
+            return;
+        }
+    </script>
+    <script language="javascript">
+        var xmlHttp;
+        //A callback function is a function passed as a parameter to another function.
+
+        function myJunkyAjaxCallBackFunction() {
+            loadXMLDoc('ajaxReturn.aspx?writeYourName=true', function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    //If the response from the server is not XML, use the responseText property.  There is also a responseXML property.
+                    document.getElementById("myDiv").innerHTML = xmlHttp.responseText;
+
+                }
+            }
+            );
+        }
+        //here is the difference from the above: - pass params to loadXMLDoc()
+        function loadXMLDoc(url, someFunc) {
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = someFunc;
+            //xmlHttp.open("GET", url, true);
+            xmlHttp.open("POST", url, true);
+            xmlHttp.send();
+        }
+
+    </script>
+    <script language="javascript">
+        function showHint(str) {
+        //window.alert(str);
+            
+            //1.  create a variable to hold the xmlhttp object
+            var xmlhttp;
+
+            //2.  make sure that the browser supports XMLHttp requests and if so, instantiate it.
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            //3.  when a POST/GET request is made by the browser, listen for the readystate change of the xmlHttp object.  When it becomes 4 and the status is 200, then execute stuff:
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    //If the response from the server is not XML, use the responseText property.  There is also a responseXML property.
+                    document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+
+                }
+            };
+            xmlhttp.open("GET", "ajaxReturn.aspx?q=" + str, true);
+            xmlhttp.send();
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="myDiv">
+        <h2>
+            Let AJAX change this text</h2>
+    </div>
+    <div>
+        this is the original button:
+        <button type="button" onclick="loadXMLDoc1()">
+            Change Content</button>
+    </div>
+    <div>
+        this button does same as above but uses a callback function under the hood: - supposedly
+        a best practice
+        <!--http://www.w3schools.com/ajax/ajax_xmlhttprequest_onreadystatechange.asp-->
+        <br />
+        In Javascript (maybe other langs??), a callback function is a function that takes
+        another function as a parameter<br />
+        <button type="button" onclick="myJunkyAjaxCallBackFunction()">
+            Change Content</button>
+    </div>
+    ----------------- html form starts
+    <form action="">
+        First name:
+        <input type="text" id="txt1" onkeyup="showHint(this.value)" />
+        <p>Suggestions:<br/> <span id="txtHint"></span></p> 
+    </form>
+    ----------------- html form ends
+</body>
+<a id="athing" href="#" onclick="writeTime();">write the time</a>
+<div id="div">
+</div>
+</html>

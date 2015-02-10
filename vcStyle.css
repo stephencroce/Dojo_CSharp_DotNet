@@ -1,0 +1,803 @@
+﻿@charset "utf-8";
+/* CSS Document for Wolters Kluwer Pharma - Vision Care Professions */
+
+body{
+	margin:0;
+	background:	url(/App_Themes/RetinalPhysician/images/tile1.jpg) repeat-x scroll 0 0 transparent;
+	padding-top:14px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1{
+	font-weight:bold;
+	color:#333;
+	font-size:18px;
+}
+
+h2{
+	color:#000000;
+	font-size: 14px;
+	font-weight:bold;	
+}
+
+h3{
+	font-weight:bold;
+	font-size:12px;
+	color:#333;
+}
+
+p, li, table{ font-size:12px; color:#000;}
+
+a{color:#0c4a92; text-decoration:none; font-weight:bold;}
+
+a:hover{text-decoration:underline;}
+
+img{border:none;}
+
+.floatLeft{float:Left; margin-right:10px;}
+
+.clearBoth{clear:both;}
+
+.blue{color:#10315f;font-size: 12px;}
+
+.grey{color:#333;}
+
+.border{border:1px solid #c0c0c0;}
+
+.blueBorder{border: 1px solid #173583; margin-bottom:20px;}
+
+.whiteBorder{border: 1px solid #FFF;}
+
+.noPadding{margin:0;}
+
+.small{font-size:11px;}
+
+.xsmall{font-size:10px; padding-bottom: 2px;}
+
+/* Top Ad Area */
+
+#top{margin:0 auto; width:960px; height:90px;}
+
+#addRight{float:right;}
+
+/* Ads */
+
+#ad728x90{float:left;}
+
+#ad160x600{padding-left:10px; text-align:right; margin-bottom:20px;}
+
+.ad300x250{margin-bottom:20px;}
+
+/* Shadows */
+
+
+#borderLeft{
+    background: url(/App_Themes/RetinalPhysician/images/tileleft.png) repeat-y scroll left top transparent;
+    margin: 0 auto;
+    width: 980px;
+}
+
+#borderRight{
+    background: url(/App_Themes/RetinalPhysician/images/tileright.png) repeat-y scroll right top transparent;
+    margin: 0 auto;
+    width: 980px;
+}
+
+#topshade{
+    background:url(/App_Themes/RetinalPhysician/images/shade-top.jpg) no-repeat left top;
+    height:10px;
+    margin: 5px auto 0;
+    width: 980px;
+}
+
+#wrap{
+ 	margin-top:5px;
+    border:1px solid #828282;
+    margin:0 auto;
+    width:960px;
+    background:#FFF;
+}
+
+/* Header */
+
+#header{padding: 0 10px; height:112px;}
+
+#logo{float:left; width:160px;}
+
+#quote{width:205px; float:left; padding:45px 12px 10px}
+
+#search{width:255px; float:left; padding-top:45px;}
+
+#search a{font-size:11px; text-decoration:none; color:#0c4a92; font-weight:bold;}
+
+#search input{margin-bottom:4px; width: 165px;}
+
+#utilityLinks{width:280px; float:right; padding-top:15px; text-align:right;}
+
+/* Buttons */
+
+.largebtn{
+	background: url(/App_Themes/RetinalPhysician/images/large-btn.jpg) no-repeat scroll left top transparent;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    padding-top: 5px;
+    text-align: center;
+    width: 204px;
+}
+
+.smallbtn{
+	background: url(/App_Themes/RetinalPhysician/images/small-btn.jpg) no-repeat scroll left top transparent;
+    font-size: 11px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    width: 62px !important;
+	border:none;
+	text-transform:uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.largebtn a{ color:#000; text-decoration:none;} 
+
+.promobtn{background:url(/App_Themes/RetinalPhysician/images/promo-btn.jpg) no-repeat left top; width:160px; font-size:13px; font-weight:bold; text-transform:uppercase; text-align:center; padding-top:10px; padding-bottom:10px; margin-top:12px; margin-bottom:18px;}
+
+/* Menu */
+
+#menu{ background: url(/App_Themes/RetinalPhysician/images/menu-bg.gif) repeat-x top left; padding-bottom: 30px;  padding-top: 14px; margin-bottom: 10px;}
+
+#menu ul{margin:0; padding:0;}
+
+#menu li{list-style-type:none; display:inline; font-size:12px; font-weight:bold; font-family:'Trebuchet MS', Arial, Helvetica, san-serif;}
+
+#menu .last a{border-right:none;}
+
+#menu a{text-decoration:none; color:#000; font-size:13px; border-right: 1px solid #afafaf; padding:0 8px;} 
+
+#menu a:hover{text-decoration:underline;}
+
+.sf-menu, .sf-menu * {
+  list-style: none outside none;
+}
+.sf-menu {
+  line-height: 1;
+}
+.sf-menu ul {
+  position: absolute;
+  top: -999em;
+  width: 10em;
+}
+.sf-menu ul li {
+  width: 100%;
+}
+.sf-menu li:hover {
+  visibility: inherit;
+}
+.sf-menu li {
+  float: left;
+  position: relative;
+}
+.sf-menu a {
+  display: block;
+  position: relative;
+}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+  left: 0;
+  top: 20px;
+  z-index: 1000;
+}
+ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul {
+  top: -999em;
+}
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
+  left: 10em;
+  top: 0;
+}
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul {
+  top: -999em;
+}
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
+  left: 10em;
+  top: 0;
+}
+#primaryNavigation.sf-menu {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 0 0 10px;
+  height:29px;
+  float: left;
+}
+ul#primaryNavigation.sf-menu ul {
+  border: medium none;
+  float: none;
+  margin: 0;
+  text-align: left;
+  width: 200px;
+}
+
+#primaryNavigation.sf-menu li.first a {
+  background: none repeat scroll 0 0 transparent;
+}
+#primaryNavigation.sf-menu li.first ul{
+	margin-left:-10px;
+}
+#primaryNavigation.sf-menu li a:hover {
+  color: #20409a;
+}
+#primaryNavigation.sf-menu li:hover ul, #primaryNavigation.sf-menu li.sfHover ul {
+  left: 1px;
+  top: 28px;
+}
+#primaryNavigation.sf-menu li:hover a {
+  color: #0C4A92;
+}
+#primaryNavigation.sf-menu li li {
+  background-color: #525252;
+  border-right: medium none;
+  border-bottom: 1px solid #C2C2C2;
+  display: block;
+  background-image:none;
+}
+#primaryNavigation.sf-menu li li a:link, #primaryNavigation.sf-menu li li a:visited {
+  color: #FFFFFF;
+}
+#primaryNavigation.sf-menu li li a {
+  background: none repeat scroll 0 0 transparent;
+  color: #FFFFFF;
+  display: block;
+  font-size: 0.95em;
+  font-weight: bold;
+  line-height: 1.3em;
+  padding: 5px 8px 5px 14px;
+  text-decoration: none;
+  border-right:none !important;
+}
+#primaryNavigation.sf-menu li li a:hover {
+  background-color: #0E335D;
+  color: #FFFFFF;
+}
+
+/* Main Container */
+
+#mainContainer form{margin:0;}
+
+/* Left Container */
+
+#left{float:left; width:172px; padding-right:20px;}
+
+#promo{padding-left:10px;}
+
+#topics{ border-top: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; margin-bottom:18px;}
+
+#topics .title{background: url(/App_Themes/RetinalPhysician/images/topics-header.gif) repeat-x top left; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; text-transform: uppercase; padding:5px 10px 5px 18px; margin:0;}
+
+#topics ul{margin:0; padding:0 0 8px; background: url(/App_Themes/RetinalPhysician/images/topics-bottom.jpg) repeat-x bottom left;}
+
+#topics li{background:url(/App_Themes/RetinalPhysician/images/topics-slice.gif) repeat-x scroll left top #EDEDED; border-top: 1px solid #CBCBCB; font-size: 11px; font-weight: bold; list-style-type: none;  padding-bottom: 1px; padding-left: 10px; padding-top: 4px; margin:0;}
+
+#topics a{color:#666666; text-decoration:none;}
+
+#classifieds{margin-left:12px; color:#333333;}
+#classifieds .title{background: url(/App_Themes/RetinalPhysician/images/classifieds.jpg) no-repeat scroll left top transparent;  color: #FFFFFF;  font-size: 13px;  font-weight: bold; padding-bottom: 10px; padding-left: 25px; padding-top: 8px; text-transform: uppercase; margin:0;}
+#classifieds p{font-size:12px;}
+
+.yellowbox{border:1px solid #c0c0c0; padding:0 12px 5px; background:#f7f5e8; margin-bottom: 20px;}
+
+.yellowboxLeft{width:115px; float:left; padding-top:10px;}
+
+.yellowboxRight{ width:155px; float:right; padding-top:20px; padding-bottom:10px;}
+
+.yellowboxRight input{
+    background: url(/App_Themes/RetinalPhysician/images/nl-input-bg.jpg) no-repeat scroll left top transparent;
+    border: 0 none;
+    margin-bottom: 8px;
+    padding-bottom: 7px;
+    padding-top: 4px;
+    padding-left:5px;
+    width: 152px;
+}
+
+.subscribe{width:106px !important; font-size:12px; font-weight:bold; background: url(/App_Themes/RetinalPhysician/images/btnsubscribe.jpg) no-repeat left top !important; border:none; }
+
+.archive{background: url(/App_Themes/RetinalPhysician/images/grey-btn.jpg) no-repeat left top !important; width:106px !important; font-size:12px; font-weight:bold;}
+
+.vote{background:url(/App_Themes/RetinalPhysician/images/btn-xsmall.jpg) no-repeat left top; width:48px; border:none; font-size:12px; font-weight:bold; padding:3px 0px; margin-top:7px;}
+
+/* Center Container */
+
+#center{ width:440px; float:left;}
+
+#center p, #center li, #center table{line-height:18px;}
+
+#center table{line-height:16px;}
+
+.boxesTitle{background: url(/App_Themes/RetinalPhysician/images/arrow-header.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:8px 20px 20px; margin:0;}
+
+.boxesTitleGrey{background: url(/App_Themes/RetinalPhysician/images/arrow-header-grey.jpg) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:8px 20px 21px; margin:0;}
+
+.boxes{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 0; margin-bottom:20px;}
+
+.conferenceBox{border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; margin-bottom:20px;}
+
+.greyBoxes{ background: #E7E7E7 url(/App_Themes/RetinalPhysician/images/grey-gradient.gif) repeat-x left top; border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:8px; margin-bottom:20px;}
+
+.whiteBoxes{ width: 137px; float:left; text-align:center;}
+
+.whiteBoxes .title{color:#0c4a92; font-weight:bold; font-size:12px; padding:10px 0;}
+
+.whiteBoxes p{color:#333333; font-size:12px; margin:0;}
+
+.whiteBoxes img{border:1px solid #c5c5c5;}
+
+.divider{ border-bottom: 1px solid #c0c0c0; padding-top:15px; margin-bottom:5px;}
+
+.boxLeft{border-right: 1px solid #C0C0C0;
+    float: left;
+    margin-top: -24px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-top: 24px;
+    width: 195px;}
+
+.boxRight{float:right; width:195px;}
+
+/* Lists Arrow - Simple */
+
+.arrow{margin:0; padding:8px 0 20px;}
+
+.arrow li{list-style-type:none; background: url(/App_Themes/RetinalPhysician/images/arrow.gif) no-repeat 0 6px; padding-left:20px; padding-bottom:2px; padding-top:2px; font-size:12px; font-weight:bold;}
+
+.simple{margin: 0; padding-left:10px; padding-bottom: 5px;}
+
+.simple li{list-style-type:none; font-size:11px; padding-bottom:4px;}
+
+.conference{background: #EDEDED url(/App_Themes/RetinalPhysician/images/conference-bg.gif) repeat-x left top; padding-left: 12px; padding-top: 8px; border-bottom: 1px solid #c0c0c0; padding-bottom:5px;}
+
+.conference img{vertical-align:middle;}
+
+.conference p{margin:0; padding-top:18px; *padding-top:0;}
+
+/* Carousel */
+
+/* ---- Carousel Styles ---- */
+
+#mycarousel{height:auto;}
+
+#mycarousel p{font-size:11px; color:#0c4a92; font-weight:bold;}
+
+#carouselShare li {width:360px; margin-right:0;}
+
+#carouselShare .carouselImage{ width: 220px; float:left;}
+#carouselShare .carouselContent{ width: 132px; float:right; text-align:left;}
+
+#carouselShare .jcarousel-skin-tango .jcarousel-clip-horizontal { width: 355px; !important}
+
+#carouselShare .small{margin-top:0; padding-top:2px; padding-right: 18px;}
+
+.jcarousel-skin-tango .jcarousel-container {}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {direction: rtl;}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width:360px;
+    padding:0px 36px;
+	margin-left:-8px;
+}
+
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:360px;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+    width: 105px;
+    height: auto;
+	text-align:center;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 15px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-vertical {
+    margin-bottom: 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    height:70px;
+    position:absolute;
+    right:5px;
+    top:20px;
+    width: 30px;
+    cursor: pointer;
+    background: transparent url(/App_Themes/RetinalPhysician/images/next-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(/App_Themes/RetinalPhysician/images/prev-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 30px;
+    height: 70px;
+    cursor: pointer;
+    background: transparent url(/App_Themes/RetinalPhysician/images/prev-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(/App_Themes/RetinalPhysician/images/next-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+/* Right Container */
+
+#right{ width:300px; float:right; padding-right:10px; }
+
+.updates{ border: 1px solid #c0c0c0; background: url(/App_Themes/RetinalPhysician/images/updates.jpg) no-repeat left top; font-size:13px; font-weight:bold; color:#0c4a92; padding: 12px 0; margin-bottom:20px; }
+
+#newsletter a{font-weight:normal;}
+
+#right .title{
+	background: url(/App_Themes/RetinalPhysician/images/right-sidebar-header.jpg) repeat-x scroll left top transparent;
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 10px 9px 18px;
+    text-transform: uppercase;}
+	
+#readerPoll td{padding-bottom:10px;}
+
+	
+#readerDesk img{margin-top:12px;}
+
+#readerDesk .yellowbox{padding-top:10px; padding-bottom:8px;}
+
+#readerHelpdeskLeftRail
+{
+    color: #333333;
+    margin-left: 12px;
+}
+#readerHelpDeskLeftRail .title
+{
+
+    background: url("/App_Themes/RetinalPhysician/images/classifieds.jpg") no-repeat scroll left top transparent;
+    color: #FFFFFF;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-top: 8px;
+    text-transform: uppercase;
+
+
+}
+
+.minHeight{min-height:82px;}
+
+a.adjust{font-weight:normal;text-decoration:none;font-size:12px;}
+
+.shareThis{padding:10px 0;}
+
+/* Footer */
+
+#footer{background: #f7f5e8; border-top: 1px solid #c0c0c0; padding:20px 12px 20px 22px; min-height:100px;}
+
+#footer h2{margin-top:0;}
+
+#footerLeft p{color:#7a7a7a; font-size:11px;}
+
+#footerLeft{width:582px; float:left; border-right: 1px solid #c0c0c0; padding-right: 10px;}
+
+#footerRight{width: 320px; float:right;}
+
+#footerRight p{margin-top:0;}
+
+#footerRight select{width:278px;}
+
+#footerLinks{background: url(/App_Themes/RetinalPhysician/images/bottom-shade.jpg) no-repeat left top; width:980px; margin: 0 auto; font-size:11px; color:#c0c0c0; text-align:center; padding-bottom: 10px;  padding-top: 12px; line-height:18px;}
+
+#footerLinks a{font-weight:normal; padding-left:10px; padding-right:10px;}
+
+
+#blueContainer440{ width:440px; float:left;}
+
+.boxesTitle440{background: url(~/App_Themes/RetinalPhysician/Images/header440.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:8px 20px 7px; margin:0;}
+
+.boxes{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 10px; margin-bottom:20px;}
+
+
+#blueContainerAH440{ width:440px; float:left;}
+
+.boxesTitleAH440{background: url(~/App_Themes/RetinalPhysician/Images/arrow-header.jpg) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:8px 20px 7px; margin:0;}
+
+.boxesAH440{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 10px; margin-bottom:20px;}
+
+
+#blueContainerAH550{ width:550px; float:left;}
+
+.boxesTitleAH550{background: url(~/App_Themes/RetinalPhysician/Images/arrow-header550.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:8px 20px 7px; margin:0;}
+
+.boxesAH550{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 10px; margin-bottom:20px;}
+
+
+
+/* Three quarter Container */
+
+#centerThreeQuarter { width:720px; float:left;}
+
+.boxesTitle34{background: url(~/App_Themes/RetinalPhysician/Images/arrow-header640.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:8px 20px 20px; margin:0;}
+
+.boxes34{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 0; margin-bottom:20px;}
+
+.blubox{border:1px solid #c0c0c0; padding:0 12px 5px; background:#f7f5e8; margin-bottom: 20px;}
+
+.bluboxLeft{width:385px; float:left; padding-top:10px;}
+
+.bluboxRight{ width:300px; float:right; padding-top:10px; padding-bottom:10px;}
+
+.bluboxRight input{
+	background: url(~/App_Themes/RetinalPhysician/Images/nl-input-bg.jpg) no-repeat scroll left top transparent;
+    border: 0 none;
+    margin-bottom: 8px;
+    padding-bottom: 7px;
+    padding-top: 4px;
+	padding-left:5px;
+    width: 152px;}
+
+/* Full page Container */
+
+#blueContainer880{ width:880px; float:left;}
+
+.boxesTitle880{background: url(~/App_Themes/RetinalPhysician/Images/arrow-header880.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:8px 20px 20px; margin:0;}
+
+.boxes{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 10px; margin-bottom:20px;}
+
+/* Two Third Container */
+
+#blueContainer550{ width:550px; float:left;}
+
+.boxesTitle550{background: url(~/App_Themes/RetinalPhysician/Images/arrow-header550.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:8px 20px 20px; margin:0;}
+
+.boxes550{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 10px; margin-bottom:20px;}
+
+#vcBlueContainer640{ width:640px; float:left;}
+
+.boxesTitle640{background: url(~/App_Themes/RetinalPhysician/Images/arrow-header640.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:7px 20px 20px; margin:0;}
+
+.boxes640{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 10px; margin-bottom:20px;}
+
+#vcBlueContainerAH720{ width:720px; float:left;}
+
+.boxesTitleAH720{background: url(~/App_Themes/RetinalPhysician/Images/arrow-header720.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:7px 20px 20px; margin:0;}
+
+.boxesAH720{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 10px;}
+
+
+
+#vcBlueContainer720{ width:720px; float:left;}
+
+.boxesTitle720{background: url(~/App_Themes/RetinalPhysician/Images/header720.png) no-repeat left top; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; padding:7px 20px 7px; margin:0;}
+
+.boxes720{ border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; padding:12px 12px 10px; margin-bottom:20px;}
+
+
+#articles{ width:80px; float:left;}
+
+.box{border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-top: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; margin-bottom:5px; padding:5px 5px 5px 10px;}
+
+.title{font-size:12px;font-weight:bold;}
+
+.by{font-size:10px;}
+
+.description{font-size:12px;}
+
+
+
+
+
+/*#Supplement#*/
+#supplement{ width:40px; float:left;}
+
+a{color:#0c4a92; text-decoration:none; font-weight:bold;}
+a:hover{text-decoration:underline;}
+
+.supplementBox{border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0; border-top: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0; margin-bottom:5px; padding:5px 5px 5px 10px;}
+
+.supplementTitle{font-size:13px;font-weight:bold;padding-bottom:10px;}
+
+.supplementImg{padding-right:15px; float:left;}
+
+.supplementTeaser{font-size:10px;padding-bottom:100px;}
+
+.supplementDetailArticleHdr{font-size:12px;font-weight:bold;}
+
+.supplementDetailMonthYr{font-size:14px;font-weight:bold;}
+
+.supplementDetailTitle{font-size:16px;font-weight:bold;}
+
+.supplementDetailTeaser{font-size:10px;}
+
+.ArticleTOCSupplHeader{font-size:20px;font-weight:bold;}
+
+.ArticleTOCSupplTeaser{font-size:10px;}
+
+.ArticleTOCHeader{font-size:15px;font-weight:bold;}
+
+.ArticleTOCTeaser{font-size:13px;padding-bottom:10px;}
+
+.ArticleDetailHeader{font-size:20px;font-weight:bold;}
+
+.ArticleDetailText{font-size:12px;padding-bottom:10px;}
+
+/*#Articles#*/
+.opArticles{
+  margin:10px;
+  height:auto;
+  width:auto;
+  float:left;
+  text-align:center;
+  }
+.opArticles img
+  {
+  display:inline;
+  margin:3px;
+  border:1px solid #ffffff;
+  }
+.opArticles a:hover img
+  {
+  border:1px solid #0000ff;
+  }
+.opArticles .desc
+  {
+  text-align:center;
+  font-family: Arial;
+  font-size:14px;
+  width:120px;
+  margin:2px;
+  }
+
+/*#Contacts#*/
+.vcContacts
+  {
+  margin:10px;
+  height:auto;
+  width:auto;
+  float:left;
+  text-align:center;
+  }
+
+.vcContacts.vcDesc
+  {
+  text-align:center;
+  font-family: Arial;
+  font-size:14px;
+  width:120px;
+  margin:2px;
+  }
+
+/*#Polls#*/
+.PollTitle
+{
+	font-weight:bold;
+	display:none;
+	margin-bottom:10px
+}
+
+.PollAnswers{
+	font-size: 11px;
+	margin-top: 8px;
+}
+
+.PollGraph
+{
+	height: 8px;
+	border: 1px solid gray;
+}
+
+.PollGraph div
+{
+	height: 8px;
+	background: url(../App_Themes/CommunitySite/Images/poll.gif) 100% 0% repeat-x;
+	line-height: 0px;
+	font-size: 0px;
+}
+
+.PollGraph div.PollGraph0
+{
+	background: url(../App_Themes/CommunitySite/Images/poll.gif) 100% 0% repeat-x;
+}
+
+.PollGraph div.PollGraph2
+{
+	background: url(../App_Themes/CommunitySite/Images/poll.gif) 100% 0% repeat-x;
+}
+
+.PollQuestion
+{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.PollCount
+{
+	text-align: right;
+	padding-left: 5px;
+}
+
+.PollFooter
+{
+	margin-top: 10px;
+}
+
+.PollsBox
+{
+	width: 80px;
+}
+
+.PollVoteButton
+}
+  background:url(images/btn-xsmall.jpg) no-repeat left top; width:48px; border:none; font-size:12px; font-weight:bold; padding:3px 0px; margin-top:7px;
+}
+
+/* ================================================================ */
+/*# new garet #*/
+/* ================================================================ */
+#coverImageTable { margin: 0px auto; border-collapse: collapse; border: 0px solid #000000; }
+#coverImageTable .rowa { background: #ffffff; height: 20px; width: 250px;}
+#coverImageTable .rowb { background: #c0c0c0; height: 20px;}
+#coverImageTable .cell { padding: 20px; border: 0px solid #000000;}

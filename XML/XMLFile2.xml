@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<returnedzerotable>
+    <advanced count="0" filter="None">
+        <isbn>9876543210</isbn>
+        <isbn>1234567891</isbn>
+    </advanced>
+    <advanced count="0" filter="None">
+        <isbn>4455667788</isbn>
+        <isbn>1122334455</isbn>
+    </advanced>
+    <advanced count="0" filter="None">
+        <isbn>4244242424</isbn>
+        <isbn>2839222282</isbn>
+    </advanced>
+    <isbn>9876543210</isbn>
+    <isbn>1234567891</isbn>
+    <isbn>4455667788</isbn>
+    <isbn>1122334455</isbn>
+    <isbn>4244242424</isbn>
+    <isbn>2839222282</isbn>
+</returnedzerotable>
+
+
+
+<advanced count="0" filter="None">
+    <isbn>9876543210</isbn>
+    <isbn>1234567891</isbn>
+</advanced>
+<advanced count="0" filter="None">
+    <isbn>4455667788</isbn>
+    <isbn>1122334455</isbn>
+</advanced>
+<advanced count="0" filter="None">
+    <isbn>4244242424</isbn>
+    <isbn>2839222282</isbn>
+</advanced>
+
+<returnedzerotable>
+    <isbn>9876543210</isbn>
+    <isbn>1234567891</isbn>
+    <isbn>4455667788</isbn>
+    <isbn>1122334455</isbn>
+    <isbn>4244242424</isbn>
+    <isbn>2839222282</isbn>
+</returnedzerotable>
+
+
+<returnedzerotable>
+    <advanced count="0" filter="None">
+        <isbn>9876543210</isbn>
+        <isbn>1234567891</isbn>
+    </advanced>
+    <advanced count="0" filter="None">
+        <isbn>4455667788</isbn>
+        <isbn>1122334455</isbn>
+    </advanced>
+    <advanced count="0" filter="None">
+        <isbn>4244242424</isbn>
+        <isbn>2839222282</isbn>
+    </advanced>
+</returnedzerotable>
+
+
+<returnedzerotable>
+    <advanced count="0" filter="None">
+        <isbn>9876543210</isbn>
+        <isbn>1234567891</isbn>
+    </advanced>
+    <advanced count="0" filter="None">
+        <isbn>4455667788</isbn>
+        <isbn>1122334455</isbn>
+    </advanced>
+    <advanced count="0" filter="None">
+        <isbn>4244242424</isbn>
+        <isbn>2839222282</isbn>
+    </advanced>
+</returnedzerotable>
+
+<returnedzerotable>
+    <isbn>9876543210</isbn>
+    <isbn>1234567891</isbn>
+    <isbn>4455667788</isbn>
+    <isbn>1122334455</isbn>
+    <isbn>4244242424</isbn>
+    <isbn>2839222282</isbn>
+</returnedzerotable>
+
+
+
+<advanced count="0" filter="None">
+    <isbn>6666666666</isbn>
+    <isbn>5555555555</isbn>
+    <isbn>4444444444</isbn>
+    <isbn>3333333333</isbn>
+</advanced>
+
+xmlString	"<advanced count=\"0\" filter=\"None\">
+    <isbn>3232323232</isbn>
+    <isbn>6776677654</isbn>
+    <isbn>9997773331</isbn>
+</advanced>"	string

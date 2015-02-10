@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Squish544</title>
+    <link rel="stylesheet" href="../../js/jquery.tooltip.css" />
+    <!--<link rel="stylesheet" href="../../js/screen.css" />-->
+    <script language="javascript" type="text/javascript" src="../../js/jquery.js"></script>
+    <!--<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>-->
+
+    <script language="javascript" type="text/javascript" src="../../js/jquery.tooltip.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+    
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){ 
+        $("#yahoo a").tooltip({
+            track: true,
+            delay: 0,
+            showURL: false,
+            showBody: " - ",
+            fade: 250
+        });
+
+        $("#yahoo a").css("border", "1px solid green");
+
+        //$('#crap').tooltip().mouseover();
+    });
+
+    function doit() {
+        //window.alert('doingit');
+        $('#shit').show(); 
+    }
+  
+    </script>
+</head>
+<body>
+    test of jquery tooltip
+    <fieldset>
+        <legend>The next four links have no delay with tracking and fading, with extra content:</legend>
+        <div id="yahoo">
+            <a title="Yahoo doo - more content" href="http://yahoo.com">Link to yahoo</a>
+            <a title="Yahoo doo2 - wohooo" href="http://yahoo.com">Link to yahoo1</a>
+            <a title="Yahoo doo3" href="http://yahoo.com">Link to yahoo2</a>
+            <a title="Yahoo doo4 - buga!" href="http://yahoo.com">Link to yahoo3</a>
+        </div>
+        
+        <a title="unrelated stuff" id="crap" onmouseover="doit();" href="http://www.zombo.com">Welcom to Zombo</a>
+        <div id="shit" style="display:none;">shit</div>
+    </fieldset>
+</body>
+</html>

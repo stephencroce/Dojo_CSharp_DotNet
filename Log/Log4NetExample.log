@@ -1,0 +1,33 @@
+2012-02-28 11:40:55,837 [11] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:12:46,226 [11] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:12:47,833 [10] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:12:47,839 [10] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button, didn't you?
+2012-02-28 12:12:51,398 [10] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:12:51,398 [10] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button, didn't you?
+2012-02-28 12:40:11,103 [10] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:40:11,111 [10] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button, didn't you?
+2012-02-28 12:40:14,091 [10] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:40:14,091 [10] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button, didn't you?
+2012-02-28 12:40:14,738 [11] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:40:14,738 [11] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button, didn't you?
+2012-02-28 12:40:32,685 [11] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:40:32,685 [11] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button, didn't you?
+2012-02-28 12:40:33,290 [10] DEBUG TestCSharpApp._Default crapola
+2012-02-28 12:40:33,290 [10] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button, didn't you?
+2012-11-01 11:57:29,673 [838] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:57:32,051 [837] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:57:32,051 [837] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,11/1/2012 11:57:32 AM didn't you?
+2012-11-01 11:57:32,677 [822] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:57:32,677 [822] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,11/1/2012 11:57:32 AM didn't you?
+2012-11-01 11:57:33,188 [830] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:57:33,188 [830] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,11/1/2012 11:57:33 AM didn't you?
+2012-12-11 12:24:06,626 [7] DEBUG TestCSharpApp._Default crapola
+2013-01-24 12:19:36,634 [6] DEBUG TestCSharpApp._Default crapola
+2013-01-24 12:22:25,157 [16] DEBUG TestCSharpApp._Default crapola
+2013-01-24 12:46:45,691 [15] DEBUG TestCSharpApp._Default crapola
+2013-02-04 17:29:37,183 [6] DEBUG TestCSharpApp._Default crapola
+2013-02-26 15:26:40,274 [7] DEBUG TestCSharpApp._Default crapola
+2013-02-26 15:26:54,232 [7] DEBUG TestCSharpApp._Default crapola
+2013-02-26 15:26:54,246 [7] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,2/26/2013 3:26:54 PM didn't you?
+2013-02-26 15:27:02,541 [7] DEBUG TestCSharpApp._Default crapola
+2013-02-28 13:49:50,109 [5] DEBUG TestCSharpApp._Default crapola

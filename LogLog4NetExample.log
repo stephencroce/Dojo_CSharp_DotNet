@@ -1,0 +1,11 @@
+2012-11-01 11:56:32,852 [822] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:56:35,187 [822] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:56:35,187 [822] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,11/1/2012 11:56:35 AM didn't you?
+2012-11-01 11:56:37,258 [838] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:56:37,258 [838] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,11/1/2012 11:56:37 AM didn't you?
+2012-11-01 11:56:57,348 [830] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:56:57,348 [830] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,11/1/2012 11:56:57 AM didn't you?
+2012-11-01 11:56:58,171 [839] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:56:58,172 [839] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,11/1/2012 11:56:58 AM didn't you?
+2012-11-01 11:57:00,371 [822] DEBUG TestCSharpApp._Default crapola
+2012-11-01 11:57:00,371 [822] DEBUG TestCSharpApp.TestCSharpAppPageBase you clicked the log4 Button on,11/1/2012 11:57:00 AM didn't you?

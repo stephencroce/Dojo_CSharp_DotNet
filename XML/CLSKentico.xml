@@ -1,0 +1,47 @@
+﻿<content>
+    <webpart id="editabletext;6f3f5256-0822-45bc-97f2-b0d2bed312c7">
+        <![CDATA[<div id="searchBox">
+<h1>Advanced Search</h1>
+<fieldset><label>Keywords</label> <input name="Keywords" id="Keywords" /> <br />
+and  <select name="FieldNameTerm1" id="FieldNameTerm1">
+<option value=""></option>
+<option value="Fulltext" selected="">Full text</option>
+<option value="ARTICLE_TITLE">Title</option>
+<option value="ARTICLE_ID">Id</option>
+<option value="ARTICLE_DEPARTMENT">Department</option>
+<option value="ARTICLE_SPONSOR">Sponsor</option>
+<option value="ARTICLE_PUBLICATION">Publication</option>
+</select> <input name="FieldTerm1" id="FieldTerm1" /> <br />
+and <select name="FieldNameTerm2" id="FieldNameTerm2">
+<option value="" selected=""></option>
+<option value="Fulltext">Full text</option>
+<option value="ARTICLE_TITLE">Title</option>
+<option value="ARTICLE_ID">Id</option>
+<option value="ARTICLE_DEPARTMENT">Department</option>
+<option value="ARTICLE_SPONSOR">Sponsor</option>
+<option value="ARTICLE_PUBLICATION">Publication</option>
+</select> <input name="FieldTerm2" id="FieldTerm2" /> <br />
+<span>Search these publications</span>
+<table border="0" class="searchIndexList" id="IndexesToSearch">
+    <tbody>
+        <tr>
+            <td><input type="checkbox" name="IndexesToSearch:0" id="IndexesToSearch_0" /><label for="IndexesToSearch_0">Contact Lens Spectrum</label></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="IndexesToSearch:1" id="IndexesToSearch_1" /><label for="IndexesToSearch_1">Eye Care Business</label></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="IndexesToSearch:2" id="IndexesToSearch_2" /><label for="IndexesToSearch_2">Ophthalmology Management</label></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="IndexesToSearch:3" checked="" id="IndexesToSearch_3" /><label for="IndexesToSearch_3">Retinal  Physician</label></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="IndexesToSearch:4" id="IndexesToSearch_4" /><label for="IndexesToSearch_4">Optometric  Management</label></td>
+        </tr>
+    </tbody>
+</table>
+</fieldset></div>
+<input type="submit" name="SubmitSearch" value="Search" id="SubmitSearch" /> <br />]]>
+    </webpart>
+</content>
