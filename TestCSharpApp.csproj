@@ -20,6 +20,11 @@
     <OldToolsVersion>4.0</OldToolsVersion>
     <UseIISExpress>false</UseIISExpress>
     <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1322,6 +1327,7 @@
     <Content Include="Global.asax" />
     <Content Include="HTMLPage2.htm" />
     <Content Include="HTML\CacheBuster.htm" />
+    <Content Include="HTML\CEI\ChubbLetterSampleNTSVR76BOptimized.html" />
     <Content Include="HTML\CLSCoverImageTransformation.htm" />
     <Content Include="HTML\dtSearch_VisionCare_Advanced.htm" />
     <Content Include="HTML\DigitalSupp.htm" />
@@ -1385,6 +1391,7 @@
     <Content Include="js\jquery.tooltip.js" />
     <Content Include="js\screen.css" />
     <Content Include="ReverseIt.aspx" />
+    <Content Include="stupid.html" />
     <Content Include="Ticker\crawler.aspx" />
     <Content Include="Ticker\crawler.js" />
     <Content Include="Ticker\TickerRender.htm" />
