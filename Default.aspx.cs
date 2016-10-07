@@ -20,6 +20,14 @@ namespace TestCSharpApp
     //public partial class _Default : System.Web.UI.Page
     public partial class _Default : TestCSharpAppPageBase 
     {
+        protected void btnConspiracyTheory_Click(object source, EventArgs e)
+        {
+            System.Threading.Thread.Sleep(2000);
+            string theory = "the world is flat!";
+            string existingText = this.lblConspiracyTheory.Text;
+            string newText = theory;
+            this.lblConspiracyTheory.Text = existingText + newText;
+        }
         protected void Log4Button_Click(object source, EventArgs e)
         {
             Loggah.Debug("you clicked the log4 Button on," + DateTime.Now.ToString() + " didn't you?");

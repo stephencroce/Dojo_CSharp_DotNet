@@ -27,6 +27,5 @@ C:\Users\Steve\Documents\test\vsProjectsBackup\vsProjectsBackup\TestCSharpApp\Te
 C:\git\TestCSharpApp\TestCSharpApp\bin\TestCSharpApp.dll.config
 C:\git\TestCSharpApp\TestCSharpApp\bin\TestCSharpApp.dll
 C:\git\TestCSharpApp\TestCSharpApp\bin\TestCSharpApp.pdb
-C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.csprojResolveAssemblyReference.cache
 C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.dll
 C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.pdb
