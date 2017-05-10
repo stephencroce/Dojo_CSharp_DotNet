@@ -7,7 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestCSharpApp.Ajax {
+namespace TestCSharpApp.AjaxLocal
+{
     
     
     public partial class ajaxReturn {

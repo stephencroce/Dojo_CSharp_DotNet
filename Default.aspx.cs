@@ -14,6 +14,7 @@ using System.Web.UI.WebControls.WebParts;
 
 using SharpPieces.Web.Controls;
 using log4net;
+//using ClassLibraryHack;
 
 namespace TestCSharpApp
 {
@@ -48,7 +49,15 @@ namespace TestCSharpApp
 
             Response.Write("<br/>The selected value was:  " + this.ddl.SelectedValue  + "-" + this.ddl.SelectedItem.Text);
         }
+        protected void btnChoke_Click(object sender, EventArgs e)
+        {
+            var stupid = new ClassLibraryHack.StupidMath();
+            var choke = stupid.chokeOnSomething();
+            throw (choke);
+           
+                
 
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -150,8 +159,18 @@ namespace TestCSharpApp
 
             logger.Debug("crapola");
 
-    
+
             //= myType.GetProperties();
+            ClassLibraryHack.StupidMath stupidMath = new ClassLibraryHack.StupidMath();
+            this.lblStupidMath.Text = stupidMath.Puke() + stupidMath.divideByZero(4, 4);  //version 2
+            this.lblStupidMath.Text = stupidMath.Puke() + stupidMath.divideByZero(4, 4)+stupidMath.addedInVersion3()+stupidMath.addedInVersion4() + stupidMath.addedInVersion5();  //version 3
+            this.lblStupidMath.Text = stupidMath.Puke() + stupidMath.divideByZero(4, 4) + stupidMath.addedInVersion3() + stupidMath.addedInVersion4() + stupidMath.addedInVersion5() + stupidMath.addedInAssemblyVersion1002();  //version 1.0.0.2
+
+
+            //testing out using libraries from NuGet
+            var test = new AjaxLocal.ajaxReturn();
+            var test2 = new Ajax.JSON.DefaultConverter();
+
         }
     }
 

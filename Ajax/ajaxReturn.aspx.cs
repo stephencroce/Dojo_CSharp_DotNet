@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TestCSharpApp.Ajax
+namespace TestCSharpApp.AjaxLocal
 {
     public partial class ajaxReturn : System.Web.UI.Page
     {
@@ -18,11 +18,11 @@ namespace TestCSharpApp.Ajax
             {
             if (Request.QueryString["writeYourName"] == "true")
             {
-                this.Literal1.Text = "Stephen Croce";
+                //this.Literal1.Text = "Stephen Croce";
             }
             else
             {
-                this.Literal1.Text = "You chose not to write your name.";
+                //this.Literal1.Text = "You chose not to write your name.";
             }
             }
             //string writeYourName = Request.QueryString["writeYourName"]=="true"?"Stephen Croce":"Somebody else";

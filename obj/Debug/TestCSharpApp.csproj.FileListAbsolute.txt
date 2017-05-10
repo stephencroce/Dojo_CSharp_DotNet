@@ -29,3 +29,10 @@ C:\git\TestCSharpApp\TestCSharpApp\bin\TestCSharpApp.dll
 C:\git\TestCSharpApp\TestCSharpApp\bin\TestCSharpApp.pdb
 C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.dll
 C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.pdb
+C:\git\TestCSharpApp\TestCSharpApp\bin\ClassLibraryHack.dll
+C:\git\TestCSharpApp\TestCSharpApp\bin\Ajax.dll
+C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.csprojResolveAssemblyReference.cache
+C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.letterwizard.Dialog.aspx.resources
+C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.letterwizard.Steps.Step2.ascx.resources
+C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.letterwizard.Test.aspx.resources
+C:\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.csproj.GenerateResource.Cache

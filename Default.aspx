@@ -61,6 +61,11 @@
             <button id="btnClearIt" onclick="clearConspiracies(); return false;">clear conspiracies</button>
         </div>
         <asp:Label runat="server" Text="conspiracy theory here." ID="lblConspiracyTheory"></asp:Label>
+        <hr />
+        <div style="border: dotted blue 1px;">
+            <b>Nuget Crap:</b>  Do stupid math calculation here:<asp:Label runat="server" ID="lblStupidMath" Text="tried to inject stupid math reference with Nuget....it's not calculating...."></asp:Label>
+            <asp:Button runat="server" ID="btnChoke" Text="choke" OnClick="btnChoke_Click" />
+        </div>
 
     </form>
         <script>
