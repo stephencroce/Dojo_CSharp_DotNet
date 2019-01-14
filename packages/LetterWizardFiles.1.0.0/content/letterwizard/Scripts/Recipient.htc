@@ -1,0 +1,387 @@
+<HTML id="htcMain">
+    <HEAD>
+        <STYLE TYPE="text/css">
+            @import url("../Styles/Recipient.css");
+        </STYLE>
+    </HEAD>
+    <BODY>
+        <TABLE class="Recipient" cellSpacing="0" cellPadding="0" border="0" width="100%">
+            <THEAD id="head">
+                <TR>
+                    <TD>
+                        <TABLE cellSpacing="0" cellPadding="0" border="0">
+                            <TBODY>
+                                <TR>
+                                    <TD><SPAN id="Icon" /></TD>
+                                    <TD class="Title" id="Title"></TD>
+                                </TR>
+                            </TBODY>
+                        </TABLE>
+                    </TD>
+                </TR>
+            </THEAD>
+            <TBODY id="body"></TBODY>
+            <TFOOT id="foot">
+                <TR>
+                    <TD width="100%">
+                        <TABLE cellSpacing="0" cellPadding="0" border="0" width="100%">
+                            <TBODY>
+                                <TR>
+                                    <TD width="16px"><SPAN class="imgLineB" /></TD>
+                                    <TD width="16px"><SPAN id="Plus" class="imgPlus" /></TD>
+                                    <TD width="100%" id="Text" class="txtText">Add e-mail address.</TD>
+                                </TR>
+                            </TBODY>
+                        </TABLE>
+                    </TD>
+                </TR>
+            </TFOOT>
+        </TABLE>
+        <SPAN style="display:none;">
+            <table class="Recipient" id="Edit" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td width="100%"><INPUT type="text" id="Input" class="txtInput" NAME="Input"/></td>
+                    <td width="20px;"><IMG src="Images/Recipients/ok-F1.png" id="Accept" class="Button" OnMouseOver="Swap();" OnMouseOut="Swap();" /></td>
+                    <td width="20px;"><IMG src="Images/Recipients/cancel-F1.png" id="Cancel" class="Button" OnMouseOver="Swap();" OnMouseOut="Swap();" /></td>
+                </tr>
+            </table>
+            <table id="Item">
+                <TR id="ItemRow" Selected="false" Type="Item">
+                    <TD width="100%">
+                        <TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+                                <TR>
+                                    <TD style="white-space:nowrap;"><SPAN class="imgLineA"></SPAN></TD>
+                                    <TD><IMG class="Button" id="ItemCheck" src="Images/Recipients/check-F2.png"></TD>
+                                    <TD class="ItemText" id="ItemText" width="100%"></TD>
+                                </TR>
+                                <TR id="trInfo" style="display:none;">
+                                    <TD><SPAN class="imgLine"></SPAN></TD>
+                                    <TD style="padding-left:3px;"><SPAN class="imgLineB"></SPAN></TD>
+                                    <TD class="ItemInfo" id="ItemInfo" width="100%"></TD>
+                                </TR>
+                        </TABLE>
+                    </TD>
+                </TR>
+            </table>
+        </SPAN>
+    </BODY>
+</HTML>
+<PUBLIC:COMPONENT tagName="Recipient" literalcontent="true">
+    <PUBLIC:ATTACH event="oncontentready" onevent="Init();" />
+    <PUBLIC:PROPERTY name="Items" get="getItems" />
+    <PUBLIC:EVENT name="OnItemChanged" id="ItemChanged" />
+</PUBLIC:COMPONENT>
+<SCRIPT>
+
+    function getItems() {
+        var Items = new Array();
+        for (var i = 0; i < Elements['body'].children.length; i++) {
+            var Item = Elements['body'].children[i];
+            Items[i] = new Array();
+            Items[i]['Selected'] = (Item.getAttribute('Selected', 2).toLowerCase() == 'true') ? true : false;
+            Items[i]['Value'] = Item.all('ItemText').innerHTML
+            Items[i]['Info'] = Item.all('ItemInfo').innerHTML
+        }
+        return Items;
+    }
+
+    function ProcessEvents() {
+        oEvent = createEventObject();
+        oEvent.result = getItems();
+        ItemChanged.fire(oEvent);
+    }
+
+    /**********************************************************************************************************************************************************************************************************************************************************************************\
+        Client Machine Must Have MSXML 4.0 SP2 Installed
+        \\ntsvr48\Community\CEI COMMUNITY\IT Tech Software\Microsoft\XML4\SP2
+    \**********************************************************************************************************************************************************************************************************************************************************************************/
+    var Elements = null;
+
+    var CurrentItem = null;
+    var CurrentValue = null;
+
+    var cType = null;
+    var cText = null;
+    var cTitle = null;
+    var cRegEx = null;
+
+    var State = null; // Either 'Add' or 'Item'
+
+    function Init() {
+        AssignObjects();
+        SetProperties();
+        ReadItems();
+
+        var html = document.getElementById('htcMain')
+        defaults.viewLink = html.document;
+    }
+
+    function AssignObjects() {
+        cType = getAttribute('type', 2).toLowerCase();
+        cText = getAttribute('text', 2);
+        cTitle = getAttribute('title', 2);
+        cRegEx = getAttribute('regex', 2);
+
+        Elements = new Array();
+        Elements['control'] = document.parentWindow.document.getElementById(id.replace(':HTC', ''))
+        Elements['head'] = document.getElementById('head');
+        Elements['icon'] = document.getElementById('Icon');
+        Elements['title'] = document.getElementById('Title');
+        Elements['body'] = document.getElementById('body');
+        Elements['foot'] = document.getElementById('foot');
+        Elements['plus'] = document.getElementById('Plus');
+        Elements['text'] = document.getElementById('text');
+        Elements['edit'] = document.getElementById('edit');
+        Elements['input'] = document.getElementById('Input');
+        Elements['accept'] = document.getElementById('Accept');
+        Elements['cancel'] = document.getElementById('Cancel');
+    }
+
+    function SetProperties() {
+        Elements['icon'].className = (cType == 'email') ? 'imgEmail' : 'imgFax';
+        Elements['text'].innerHTML = cText;
+        Elements['title'].innerHTML = cTitle.replace('{}', '0');
+
+        Elements['plus'].attachEvent("onclick", NewItem)
+        Elements['text'].attachEvent("onclick", NewItem)
+
+        Elements['input'].attachEvent("onkeyup", AcceptItem)
+        Elements['accept'].attachEvent("onclick", AcceptItem)
+
+        Elements['cancel'].attachEvent("onclick", CancelItem)
+    }
+
+    // Moves the TextBox into the 
+    function NewItem() {
+        if (State != null) { CleanUp() }
+
+        State = 'Add';
+
+        Elements['plus'].detachEvent("onclick", NewItem)
+        Elements['text'].detachEvent("onclick", NewItem)
+
+        Elements['text'].innerHTML = '';
+        Elements['text'].appendChild(Elements['edit']);
+        Elements['input'].value = '';
+        Elements['input'].focus();
+        Elements['input'].select();
+    }
+
+    function CleanUp() {
+        if (State == 'Add') {
+            Elements['text'].removeChild(Elements['edit'])
+            Elements['text'].innerHTML = cText
+            Elements['plus'].attachEvent("onclick", NewItem);
+            Elements['text'].attachEvent("onclick", NewItem);
+            Elements['input'].value = '';
+        }
+
+        if (State == 'Item') {
+            if (CurrentItem != null) {
+                CurrentItem.all('ItemText').attachEvent("onclick", EditItem);
+                CurrentItem.all('ItemText').removeChild(Elements['edit']);
+                CurrentItem.all('ItemText').innerHTML = CurrentValue;
+            }
+
+            CurrentValue = null;
+            CurrentItem = null;
+        }
+
+        Elements['input'].className = 'txtInput';
+        Elements['accept'].src = Elements['accept'].src.replace('F2', 'F1');
+        Elements['cancel'].src = Elements['cancel'].src.replace('F2', 'F1');
+
+        State = null;
+    }
+
+    function EditItem() {
+        if (State != null) { CleanUp() }
+
+        State = 'Item'
+        CurrentItem = GetNode();
+        CurrentValue = CurrentItem.all('ItemText').innerHTML;
+        CurrentItem.all('ItemText').detachEvent("onclick", EditItem);
+        CurrentItem.all('ItemText').innerHTML = '';
+        CurrentItem.all('ItemText').appendChild(Elements['edit']);
+        Elements['input'].value = CurrentValue;
+        Elements['input'].focus();
+        Elements['input'].select();
+    }
+
+
+    function AcceptItem() {
+        if (event.type == 'keyup' & event.keyCode != 13) { return false }
+
+        var re = new RegExp(cRegEx);
+        if (re.test(Elements['input'].value) == false) {
+            Elements['input'].className = 'txtInputError';
+            return false
+        } else {
+            Elements['input'].className = 'txtInput';
+        }
+
+        if (State == 'Add' & Elements['input'].value.length > 0) {
+            var Item = new Array();
+            Item['Text'] = Elements['input'].value
+            Item['Selected'] = true;
+            Item['Info'] = '';
+            Elements['body'].appendChild(CreateItem(Item))
+        }
+
+        if (State == 'Item') {
+            var NewValue = Elements['input'].value
+
+            if (NewValue.length == 0) {
+                CancelItem();
+                return true;
+            }
+            CurrentValue = NewValue
+        }
+
+        CleanUp()
+        WriteItems();
+    }
+
+
+    function CancelItem() {
+        if (State == 'Add') { CleanUp() }
+
+        if (State == 'Item') {
+            // Remove the Node
+            if (CurrentItem != null) {
+                // Before we remove the node lets set everything straight
+                var RemoveNode = CurrentItem;
+                CleanUp();
+                Elements['body'].removeChild(RemoveNode);
+                WriteItems();
+            }
+        }
+    }
+
+    // Swaps Images that have 'F1' & 'F2' in there src name;
+    function Swap(e) {
+        if (event.type == "mouseover") {
+            event.srcElement.src = event.srcElement.src.replace('F1', 'F2');
+        } else {
+            event.srcElement.src = event.srcElement.src.replace('F2', 'F1');
+        }
+    }
+
+    function CheckItem() {
+        if (State == null) {
+            Node = GetNode();
+            var Selected = !(Node.getAttribute('Selected', 2).toLowerCase() == 'true') ? true : false
+            var Check = Node.all('ItemCheck');
+            Check.src = (Selected == true) ? 'Images/Recipients/check-F1.png' : 'Images/Recipients/check-F2.png';
+            Node.setAttribute('Selected', Selected);
+            WriteItems();
+        }
+    }
+
+    // Loops Back up the parent tree and returns the first item thats type attribute = 'Item';
+    function GetNode() {
+        var CurrentTag = event.srcElement
+        while (CurrentTag.getAttribute('type', 2) != 'Item') {
+            CurrentTag = CurrentTag.parentElement
+        }
+        return CurrentTag
+    }
+
+    // This function will read in the TEXTAREA control and create the items for the Items array
+    function ReadItems() {
+        var SPAN = element.document.createElement("SPAN");
+        SPAN.innerHTML = innerHTML;
+
+
+        var Data = Elements['control'].innerText //SPAN.children[0].innerText
+
+        xDoc = new ActiveXObject("Msxml2.DOMDocument.4.0");
+        xDoc.async = false;
+        xDoc.resolveExternals = false;
+        xDoc.loadXML(Data);
+
+        var Nodes = null;
+        Nodes = xDoc.documentElement.childNodes
+
+        var Node = null;
+        var Count = 0;
+        for (var i = 0; i < Nodes.length; i++) {
+            Node = Nodes.item(i);
+            var Item = new Array();
+            Item['Text'] = Node.getAttribute('Value');
+            Item['Selected'] = (Node.getAttribute('Selected').toLowerCase() == 'true') ? true : false;
+            Item['Info'] = Node.getAttribute('Info');
+            Elements['body'].appendChild(CreateItem(Item))
+            if (Item['Selected'] == true) { Count++ }
+        }
+
+        Elements['title'].innerHTML = cTitle.replace('{}', Count);
+    }
+
+    // This function will loop through each Item in the Items array and create an XML Document to be placed in the TEXTAREA Control.
+    function WriteItems() {
+        xDoc = new ActiveXObject("Msxml2.DOMDocument.4.0");
+        xDoc.async = false;
+        xDoc.resolveExternals = false;
+        xDoc.loadXML('<ROOT/>');
+
+        var Count = 0;
+
+        for (var i = 0; i < Elements['body'].children.length; i++) {
+            var Row = Elements['body'].children[i];
+            var Selected = (Row.getAttribute('Selected', 2).toLowerCase() == 'true') ? true : false;
+            var Text = Row.all('ItemText').innerHTML;
+            var Info = Row.all('ItemInfo').innerHTML;
+
+            var Node = xDoc.createElement("ITEM");
+            var SelectedAttribute = xDoc.createAttribute("Selected")
+            var ValueAttribute = xDoc.createAttribute("Value")
+            var InfoAttribute = xDoc.createAttribute("Info")
+
+            SelectedAttribute.value = Selected;
+            ValueAttribute.value = Text;
+            InfoAttribute.value = Info;
+
+            Node.attributes.setNamedItem(SelectedAttribute);
+            Node.attributes.setNamedItem(ValueAttribute);
+            Node.attributes.setNamedItem(InfoAttribute);
+
+            xDoc.documentElement.appendChild(Node)
+
+            if (Selected == true) { Count++ }
+        }
+
+        Elements['control'].innerText = xDoc.xml;
+        Elements['title'].innerHTML = cTitle.replace('{}', Count);
+        ProcessEvents();
+    }
+
+    // This function will create an item
+    function CreateItem(Item) {
+        var Span = document.createElement('span');
+        Span.innerHTML = document.getElementById('Item').outerHTML;
+
+        var Selected = Item['Selected'];
+
+        var Row = Span.all('ItemRow')
+        var Check = Span.all('ItemCheck');
+        var Text = Span.all('ItemText');
+        var Info = Span.all('ItemInfo');
+        var InfoRow = Span.all('trInfo');
+
+
+        Row.setAttribute('Selected', Item['Selected']);
+        Text.innerHTML = Item['Text'];
+        Info.innerHTML = Item['Info'];
+
+        Check.src = (Item['Selected'] == true) ? 'Images/Recipients/check-F1.png' : 'Images/Recipients/check-F2.png';
+
+        Check.attachEvent("onclick", CheckItem);
+
+        Text.attachEvent("onclick", EditItem);
+
+        InfoRow.style.display = (Item['Info'].length > 0) ? 'inline' : 'none';
+
+        return Row;
+    }
+</SCRIPT>

@@ -1,0 +1,260 @@
+    <HTML id="htcMain">
+        <HEAD>
+            <STYLE TYPE="text/css">
+                @import url("../Styles/Multilistbox.css");
+            </STYLE>
+        </HEAD>
+        <BODY id="htcBody"></BODY>
+    </HTML>
+
+    <PUBLIC:COMPONENT tagName="MultiListBox" literalcontent="true" >
+        <PUBLIC:ATTACH    event="oncontentready" onevent="Init();"/>
+        <PUBLIC:PROPERTY  name="Items" get="getItems"/>
+        <PUBLIC:EVENT     name="onItemClick" id="itemclick"/>
+    </PUBLIC:COMPONENT>
+
+ 
+  <SCRIPT>
+      var Items = null;
+      var DisplayMember = null;
+      var Width = null;
+      var Height = null;
+      var MultiSelect = null;
+      var Frame = null;
+
+      function Init() {
+          Items = new Array();
+
+          DisplayMember = getAttribute("DisplayMember")
+          Width = getAttribute("Width").toLowerCase();
+          Height = getAttribute("Height").toLowerCase();
+          MultiSelect = getAttribute("MultiSelect").toLowerCase();
+
+          var eItems = element.document.createElement("SPAN");
+          eItems.innerHTML = innerHTML;
+
+          for (var i = 0; i < eItems.children.length; i++) {
+              var Item = eItems.children[i];
+              var Index = Item.getAttribute("Index").toLowerCase();
+              Items[Index] = new Array();
+              Items[Index]['Index'] = Index;
+              Items[Index]['Selected'] = (Item.getAttribute("Selected").toLowerCase() == 'true') ? true : false;
+              for (var n = 0; n < Item.children.length; n++) {
+                  Items[Index][Item.children[n].tagName] = Item.children[n].innerHTML;
+              }
+          }
+          Render()
+      }
+
+      function getItems() {
+          return Items;
+      }
+
+      function Render() {
+          Frame = CreateFrame();
+
+          for (var i = 0; i < Items.length; i++) {
+              Frame['Container'].appendChild(CreateItem(Items[i]))
+          }
+
+          document.getElementById('htcBody').appendChild(Frame['Table']);
+
+          var html = document.getElementById('htcMain')
+          defaults.viewLink = html.document;
+      }
+
+      function CreateFrame() {
+          var nResult = new Array();
+          nResult['Table'] = null;
+          nResult['Container'] = null;
+
+          /* Create Objects */
+          var Table = element.document.createElement('<table class="MultiListBox" style="width:' + Width + '" border=0 cellpadding=0 cellspacing=0>');
+          var TBody = element.document.createElement('TBODY');
+
+          var TR1 = element.document.createElement('TR');
+          var TD_TL = element.document.createElement('<td class="TL">');
+          var TD_TL_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="5px">');
+          var TD_TC = element.document.createElement('<td class="TC">');
+          var TD_TC_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="4px">');
+          var TD_TR = element.document.createElement('<td class="TR">');
+          var TD_TR_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="5px">');
+
+          var TR2 = element.document.createElement('TR');
+          var TD_MC = element.document.createElement('<td class="MC" colspan="3" style="height:' + Height + ';">');
+          var Div = element.document.createElement('<div class="Container">');
+
+          var TR3 = element.document.createElement('TR');
+          var TD_BL = element.document.createElement('<td class="BL">');
+          var TD_BL_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="5px">');
+          var TD_BC = element.document.createElement('<td class="BC">');
+          var TD_BC_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="4px">');
+          var TD_BR = element.document.createElement('<td class="BR">');
+          var TD_BR_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="5px">');
+
+          /* Put Jack back together again. */
+          TD_BL.appendChild(TD_BL_IMG);
+          TD_BC.appendChild(TD_BC_IMG);
+          TD_BR.appendChild(TD_BR_IMG);
+          TR3.appendChild(TD_BL);
+          TR3.appendChild(TD_BC);
+          TR3.appendChild(TD_BR);
+
+          TD_MC.appendChild(Div);
+          TR2.appendChild(TD_MC);
+
+          TD_TL.appendChild(TD_TL_IMG);
+          TD_TC.appendChild(TD_TC_IMG);
+          TD_TR.appendChild(TD_TR_IMG);
+          TR1.appendChild(TD_TL);
+          TR1.appendChild(TD_TC);
+          TR1.appendChild(TD_TR);
+
+          TBody.appendChild(TR1);
+          TBody.appendChild(TR2);
+          TBody.appendChild(TR3);
+
+          Table.appendChild(TBody);
+
+          /* Set the Results with the correct objects */
+          nResult['Table'] = Table;
+          nResult['Container'] = Div;
+
+          return nResult;
+      }
+
+      function CreateItem(Item) {
+          var _Class = (Item['Selected'] == true) ? 'Selected' : 'Normal';
+
+          /* Create Objects */
+          var Table = element.document.createElement('<table type="Item" class="' + _Class + '" index="' + Item['Index'] + '" border=0 cellpadding=0 cellspacing=0>');
+          var TBody = element.document.createElement('TBODY');
+
+          var TR1 = element.document.createElement('TR');
+          var TD_TL = element.document.createElement('<td class="TL">');
+          var TD_TL_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="5px">');
+          var TD_TC = element.document.createElement('<td class="TC">');
+          var TD_TC_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="4px">');
+          var TD_TR = element.document.createElement('<td class="TR">');
+          var TD_TR_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="5px">');
+
+          var TR2 = element.document.createElement('TR');
+          var TD_MC = element.document.createElement('<td class="MC" colspan="3">');
+
+          var TR3 = element.document.createElement('TR');
+          var TD_BL = element.document.createElement('<td class="BL">');
+          var TD_BL_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="5px">');
+          var TD_BC = element.document.createElement('<td class="BC">');
+          var TD_BC_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="4px">');
+          var TD_BR = element.document.createElement('<td class="BR">');
+          var TD_BR_IMG = element.document.createElement('<img src="../commonimages/dot.gif" width="5px" height="5px">');
+
+          /* Attach Events to Objects */
+          Table.attachEvent("onclick", ItemClick)
+          Table.attachEvent("onmouseover", ItemMouseOver)
+          Table.attachEvent("onmouseout", ItemMouseOut)
+
+          /* Put Jack back together again. */
+          TD_BL.appendChild(TD_BL_IMG);
+          TD_BC.appendChild(TD_BC_IMG);
+          TD_BR.appendChild(TD_BR_IMG);
+          TR3.appendChild(TD_BL);
+          TR3.appendChild(TD_BC);
+          TR3.appendChild(TD_BR);
+
+          TR2.appendChild(TD_MC);
+
+          TD_TL.appendChild(TD_TL_IMG);
+          TD_TC.appendChild(TD_TC_IMG);
+          TD_TR.appendChild(TD_TR_IMG);
+          TR1.appendChild(TD_TL);
+          TR1.appendChild(TD_TC);
+          TR1.appendChild(TD_TR);
+
+          TBody.appendChild(TR1);
+          TBody.appendChild(TR2);
+          TBody.appendChild(TR3);
+
+          Table.appendChild(TBody);
+
+          /* Add the Text from the Item into the Container */
+          TD_MC.innerHTML = Item[DisplayMember]
+
+          if (Item['Selected'] == true) { _SelectedElement = Table }
+
+          return Table;
+      }
+
+      function UpdateSelectedIndexes() {
+          var Indexes = null;
+          for (var i = 0; i < Items.length; i++) {
+              if (Items[i]['Selected'] == true) {
+                  if (Indexes != null) { Indexes += "|" }
+                  Indexes += i;
+              }
+          }
+
+          setAttribute('value', Indexes);
+
+          element.document.getElementById(element.id.replace(':Base', '')).value = Indexes;
+      }
+
+      var _SelectedElement = null; // This is only used when the Control;s MultiSelect Property is set to false.
+      function ItemClick(e) {
+          var _Element = GetItemRoot(e.srcElement);
+          var _Item = Items[_Element.getAttribute('index')]
+
+          if (MultiSelect == 'true') {
+              var newValue = !Items[_Element.getAttribute('index')]['Selected'];
+              _Element.className = (newValue == true) ? 'Selected' : 'Hover';
+              Items[_Element.getAttribute('index')]['Selected'] = newValue;
+          } else {
+              if (_SelectedElement == null) {
+                  _Element.className = 'Selected';
+                  Items[_Element.getAttribute('index')]['Selected'] = true;
+                  _SelectedElement = _Element;
+              } else {
+                  if (_SelectedElement == _Element) {
+                      var newValue = !Items[_SelectedElement.getAttribute('index')]['Selected'];
+                      _SelectedElement.className = (newValue == true) ? 'Selected' : 'Hover';
+                      Items[_SelectedElement.getAttribute('index')]['Selected'] = newValue;
+                  } else {
+                      _Element.className = 'Selected';
+                      Items[_Element.getAttribute('index')]['Selected'] = true;
+
+                      _SelectedElement.className = 'Normal';
+                      Items[_SelectedElement.getAttribute('index')]['Selected'] = false;
+                      _SelectedElement = _Element;
+                  }
+              }
+          }
+
+          UpdateSelectedIndexes();
+
+          var oEvent = createEventObject();
+          oEvent.result = _Item;
+          itemclick.fire(oEvent);
+      }
+
+      function ItemMouseOver(e) {
+          var _Element = GetItemRoot(e.srcElement);
+          _Element.className = (Items[_Element.getAttribute('index')]['Selected'] == false) ? 'Hover' : 'Selected';
+      }
+
+      function ItemMouseOut(e) {
+          var _Element = GetItemRoot(e.srcElement);
+          _Element.className = (Items[_Element.getAttribute('index')]['Selected'] == false) ? 'Normal' : 'Selected';
+      }
+
+      function GetItemRoot(Item) {
+          var CurrentTag = Item
+          while (CurrentTag.parentElement) {
+              CurrentTag = CurrentTag.parentElement
+              if (CurrentTag.tagName == 'TABLE') {
+                  if (CurrentTag.getAttribute('type') == 'Item') { return CurrentTag }
+              }
+          }
+          return null
+      }
+</SCRIPT>
+
