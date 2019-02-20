@@ -67,21 +67,117 @@
             <asp:Button runat="server" ID="btnChoke" Text="choke" OnClick="btnChoke_Click" />
         </div>
         <div style="border: dotted orange 2px;">
-                <asp:Button runat="server" ID="btnGuid" Text="do stupid guid thing" OnClick="btnGuid_Click" />
+            <asp:Button runat="server" ID="btnGuid" Text="do stupid guid thing" OnClick="btnGuid_Click" />
             <b>guid Crap:</b>
             <asp:Literal ID="litGuidTranslate" runat="server" Text="guid literal" />
         </div>
-
     </form>
-        <script>
-    function clearConspiracies() {
-        //window.alert('clearing');
-        var lbl = window.document.getElementById('lblConspiracyTheory');
-        console.log(lbl);
-        lbl.innerHTML = '';
+    <div>
+         <button onclick="stupidRecursion();">stupid recursion</button>
+    </div>
+    <script type="text/javascript">
+        function clearConspiracies() {
+            //window.alert('clearing');
+            var lbl = window.document.getElementById('lblConspiracyTheory');
+            console.log(lbl);
+            lbl.innerHTML = '';
+
+        }
+    </script>
+<script type="text/javascript">
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+
+ function TreeNode(val) {
+      this.val = val;
+      this.left = this.right = null;
+ }
+
+var root = [1, null, 2, 3];
+        
+
+    var preorderTraversal = function (root) { 
+
+        var result = [];
+    for (i = 0; i <= root.length - 1; i++) {
+        //console.log(root[i]);        
+        }
+        result.push("hello");
+        result.push("hello1");
+        result.push("hello2");
+    return result;
+};
+
+    console.log(preorderTraversal(root));
+
+</script>
+<script language="javascript">
+
+    function stupidRecursion() {
+
+//A recursive function should have the following properties so that it does not result in an infinite loop:
+
+//A simple base case (or cases) — a terminating scenario that does not use recursion to produce an answer.
+//A set of rules, also known as recurrence relation that reduces all other cases towards the base case.
+
+//public static long factorial(int n) { 
+//    if (n == 1) return 1; 
+//    return n * factorial(n-1); 
+//} 
+        var factorial = function (n) {
+            if (n == 1) return 1;
+            return n * factorial(n - 1);
+        }
+
+        //Input: ["h","e","l","l","o"]
+        //Output: ["o","l","l","e","h"]
+        //Example 2:
+
+        //Input: ["H","a","n","n","a","h"]
+        //Output: ["h","a","n","n","a","H"]
+        /**
+     * @param {character[]} s
+     * @return {void} Do not return anything, modify s in-place instead.
+     */
+        var reverseArray = function (stringArray, start=0, end=0) {
+          
+            if (start == 0 && end == 0) {
+                var start = 0;
+                var end = stringArray.length;
+         
+            }
+            if (start >= (stringArray.length)/2 ) {
+                return stringArray;
+            }            
+            var temp = stringArray[end-1];
+            stringArray[end-1] = stringArray[start];
+            stringArray[start] = temp;
+
+            return reverseArray(stringArray, start+1, (end)-1);
+        };  
+        
+        var input1 = ["t", "r", "i"];
+        var input2 = ["q", "u", "a", "d"];
+        var input3 = ["h", "e", "l", "l", "o"];
+        var input4 = ["s", "e", "x", "t", "e", "t"];
+        //window.alert("factorial of 5 is: " + factorial(5));
+        console.log("factorial of 5 is: " + factorial(5));
+        //window.alert("the output is: " + reverseArray(input1));
+        console.log("the output is: " + reverseArray(input1));
+        console.log("the output is: " + reverseArray(input2));
+        console.log("the output is: " + reverseArray(input3));
+        console.log("the output is: " + reverseArray(input4));
 
     }
-
 </script>
 </body>
 </html>
