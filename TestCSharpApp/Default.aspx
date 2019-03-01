@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Messed up page</title>
+    <title>TestCSharpApp</title>
 
 </head>
 <body>
@@ -74,6 +74,7 @@
     </form>
     <div>
          <button onclick="stupidRecursion();">stupid recursion</button>
+         <button onclick="stupidRecursion2();">swap nodes</button>
     </div>
     <script type="text/javascript">
         function clearConspiracies() {
@@ -120,9 +121,10 @@ var root = [1, null, 2, 3];
     console.log(preorderTraversal(root));
 
 </script>
-<script language="javascript">
+<script type="text/javascript">
 
     function stupidRecursion() {
+        //https://introcs.cs.princeton.edu/java/home/
 
 //A recursive function should have the following properties so that it does not result in an infinite loop:
 
@@ -177,6 +179,85 @@ var root = [1, null, 2, 3];
         console.log("the output is: " + reverseArray(input3));
         console.log("the output is: " + reverseArray(input4));
 
+    }
+</script>
+<script type="text/javascript">
+    function stupidRecursion2() {
+
+        //https://introcs.cs.princeton.edu/java/home/
+        //https://hackernoon.com/the-little-guide-of-linked-list-in-javascript-9daf89b63b54
+
+
+        //https://leetcode.com/explore/learn/card/recursion-i/250/principle-of-recursion/1681/
+        //Given a linked list, swap every two adjacent nodes and return its head.
+        //You may not modify the values in the list's nodes, only nodes itself may be changed.
+        //Given 1->2->3->4, you should return the list as 2->1->4->3.
+
+        /**
+        * @param {ListNode} head
+        * @return {ListNode}
+        */
+
+        //https://www.phpied.com/3-ways-to-define-a-javascript-class/
+        function ListNode(val) {
+            this.val = val;
+            this.next = null;
+        }
+
+        //Setup
+        var theInput = [1, 2, 3, 4];
+
+        var makeLinkedListManually = function (inputArray) {            
+            var linkedList = new ListNode(inputArray[0]);
+            linkedList.next = new ListNode(inputArray[1]);
+            linkedList.next.next = new ListNode(inputArray[2]);
+            linkedList.next.next.next = new ListNode(inputArray[3]);
+            return linkedList;    
+                            //{
+                            //  "val": 1,
+                            //  "next": {
+                            //    "val": 2,
+                            //    "next": {
+                            //      "val": 3,
+                            //      "next": {
+                            //        "val": 4,
+                            //        "next": null
+                            //      }
+                            //    }
+                            //  }
+                            //}
+        };
+
+
+        var makeLinkedListRecursively = function (inputArray, linkedList, counter) {                      
+            if (typeof (linkedList) === "undefined") {                    
+               counter = 0;
+               linkedList = new ListNode(inputArray[counter]);
+               counter++; //(1)
+               linkedList.next = new ListNode(inputArray[counter]);
+               //counter++//2
+            }            
+            if (counter <= inputArray.length - 1) {
+                    linkedList.next = new ListNode(inputArray[counter]);
+                    counter++;                
+                //}
+                makeLinkedListRecursively(inputArray, linkedList.next, counter);
+            }
+            return linkedList;
+        };
+
+        var swapPairs = function (head) {
+            //verify 
+            console.log(JSON.stringify(head));
+            //base case
+            //recursion until complete    
+        };
+
+        //main:
+        var theHead1 = makeLinkedListManually(theInput);
+        swapPairs(theHead1);
+        var theHead2 = makeLinkedListRecursively(theInput);
+        swapPairs(theHead2);
     }
 </script>
 </body>
