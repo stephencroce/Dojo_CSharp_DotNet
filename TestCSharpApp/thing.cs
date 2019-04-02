@@ -12,7 +12,7 @@ namespace TestCSharpApp
 {
     public class thing
     {
-
+        //this is a thing
         public string Name { get; set; }
         
             
