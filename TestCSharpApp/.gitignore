@@ -46,6 +46,6 @@ Temporary Items
 **/letterwizard/
 **/bin/*.*
 **/obj/*.*
-*.suo
+**.suo
 # Visual Studio 2015/2017 cache/options directory
 *.vs/*
