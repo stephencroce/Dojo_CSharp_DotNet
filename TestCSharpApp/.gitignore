@@ -42,5 +42,17 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-#Folders I just don't want....
-letterwizard/
+#Folders and files I just don't want....
+**/letterwizard/
+**/bin/*.*
+**/obj/*.*
+*/bin/*
+*/obj/*
+**.suo
+# Visual Studio 2015/2017 cache/options directory
+**.vs/*.*
+.dll
+.pdb
+.cache
+
+
