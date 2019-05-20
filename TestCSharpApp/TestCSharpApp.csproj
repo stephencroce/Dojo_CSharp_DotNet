@@ -1400,6 +1400,7 @@
     <Content Include="js\jquery.tooltip.css" />
     <Content Include="js\jquery.tooltip.js" />
     <Content Include="js\screen.css" />
+    <Content Include="LeetCode\LeetCode.html" />
     <Content Include="ReverseIt.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
