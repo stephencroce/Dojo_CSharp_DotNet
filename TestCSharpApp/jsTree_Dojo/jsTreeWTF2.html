@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>jsTree</title>
+    
+    <link href="lib/jsTree/dist/themes/default/style.min.css" rel="stylesheet" />
+    
+    <script src="lib/jsTree/dist/libs/jquery.min.js"></script>    
+    <script src="lib/jsTree/dist/jstree.min.js"></script>
+
+</head>
+<body>
+    <h3>jsTree DOJO</h3>
+    <div class="row">
+        <div id="jstree_source" class="demo" style="margin-top:1em; min-height:200px; border:dashed green 1px;"></div>
+        <div id="jstree_target" class="demo" style="margin-top:1em; min-height:200px; border:dashed blue 1px;"></div>
+        <div id="jstree_testData" class="demo" style="margin-top:1em; min-height:200px; border:dashed orange 1px;"></div>
+        <div id="jstree_testData2" class="demo" style="margin-top:1em; min-height:200px; border:dashed red 1px;"></div>
+        <script>
+
+            var testData = ["Child 1", { "id": "demo_child_1", "text": "Child 2", "children": [{ "id": "demo_child_2", "text": "One more", "type": "file" }] }];
+            var sources = [{ "text": "6-050819", "id": -1, "fullPath": null, "type": "rs", "children": [{ "id": "rn56214", "text": "6-050819-1", "type": "rn", "keywords": "HIL: RD270 100Å | HTL: RD270 250Å", "fullPath": null, "children": [{ "id": "c56214-0", "text": "6-050819-1:1,2,3,4,5,6,7,8,9", "type": "c", "keywords": null, "fullPath": null, "children": [] }], "a_attr": { "title": "HIL: RD270 100Å | HTL: RD270 250Å" } }] }];
+            var targets = [{ "text": "Accl Factor", "id": "r4", "fullPath": null, "type": null, "children": [] }, { "text": "SDC - Blue", "id": "r312", "fullPath": null, "type": null, "children": [] }, { "text": "UDC-Blue", "id": "r97", "fullPath": null, "type": null, "children": [] }, { "text": "UDC-RG", "id": "r96", "fullPath": null, "type": null, "children": [] }, { "text": "White", "id": "r14", "fullPath": null, "type": null, "children": [{ "id": "s6939", "text": "6-050819-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c100", "text": "6-050819-1:1,2,3,4,5,6,7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }] }]
+            var targetsMessedUp1 = [{ "text": "Accl Factor", "id": "r4", "fullPath": null, "type": null, "children": [{ "id": "s6940", "text": "A-032019-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c100", "text": "A-032019-1:7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }, { "id": "c101", "text": "A-032019-1:7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }] }, { "text": "SDC - Blue", "id": "r312", "fullPath": null, "type": null, "children": [] }, { "text": "UDC-Blue", "id": "r97", "fullPath": null, "type": null, "children": [] }, { "text": "UDC-RG", "id": "r96", "fullPath": null, "type": null, "children": [] }, { "text": "White", "id": "r14", "fullPath": null, "type": null, "children": [{ "id": "s6939", "text": "6-050819-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c100", "text": "6-050819-1:1,2,3,4,5,6,7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }, { "id": "s6940", "text": "A-032019-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c101", "text": "A-032019-1:7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }, { "id": "c102", "text": "A-032019-1:7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }] }];
+            var targetsMessedUp2 = [{ "text": "Accl Factor", "id": "r4", "fullPath": null, "type": null, "children": [{ "id": "s6940", "text": "A-032019-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c100", "text": "A-032019-1:7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }] }, { "text": "SDC - Blue", "id": "r312", "fullPath": null, "type": null, "children": [] }, { "text": "UDC-Blue", "id": "r97", "fullPath": null, "type": null, "children": [] }, { "text": "UDC-RG", "id": "r96", "fullPath": null, "type": null, "children": [] }, { "text": "White", "id": "r14", "fullPath": null, "type": null, "children": [{ "id": "s6939", "text": "6-050819-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c100", "text": "6-050819-1:1,2,3,4,5,6,7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }, { "id": "s6940", "text": "A-032019-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c101", "text": "A-032019-1:7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }] }];
+            var targetsMessedUpFixed = [{ "text": "Accl Factor", "id": "r4", "fullPath": null, "type": null, "children": [{ "id": "s6940", "text": "A-032019-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c100", "text": "A-032019-1:7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }] }, { "text": "SDC - Blue", "id": "r312", "fullPath": null, "type": null, "children": [] }, { "text": "UDC-Blue", "id": "r97", "fullPath": null, "type": null, "children": [] }, { "text": "UDC-RG", "id": "r96", "fullPath": null, "type": null, "children": [] }, { "text": "White", "id": "r14", "fullPath": null, "type": null, "children": [{ "id": "s6939", "text": "6-050819-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c100XXX", "text": "6-050819-1:1,2,3,4,5,6,7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }, { "id": "s6940XXX", "text": "A-032019-1", "type": null, "keywords": null, "fullPath": null, "children": [{ "id": "c101", "text": "A-032019-1:7,8,9", "type": null, "keywords": null, "fullPath": null, "children": [], "li_attr": { "class": "target-run-node" } }], "li_attr": { "class": "target-run-node" } }] }];
+                                 
+
+            //load source
+            $('#jstree_source')
+                .jstree({
+                    "core": {
+                        'data': sources
+                    }
+                });
+
+
+            //load target
+            $('#jstree_target')
+                .jstree({
+                    "core": {
+                        'data': targetsMessedUpFixed
+                    }
+                });
+
+
+            //load test Data
+            $('#jstree_testData')
+                .jstree({
+                    "core": {
+                        'data': testData
+                    }
+                });
+
+            var mimic = [{ "id": "ajson1", "parent": "#", "text": "Simple root node" }, { "id": "ajson1a", "parent": "ajson1", "text": "Child 1" }, { "id": "ajson2", "parent": "#", "text": "Root node 2" }, { "id": "ajson3", "parent": "ajson2", "text": "Child 1" }, { "id": "ajson4", "parent": "ajson2", "text": "Child 2" }];
+            var mimic2 = [{ "id": "ajson1", "parent": "#", "text": "Accl Factor" }, { "id": "ajson1a", "parent": "ajson1", "text": "A-032019-1" }, { "id": "ajson1aa", "parent": "ajson1a", "text": "A-032019-1:7,8,9" }, { "id": "ajson2", "parent": "#", "text": "White" }, { "id": "ajson3", "parent": "ajson2", "text": "A-032019-1" }, { "id": "ajson4", "parent": "ajson3", "text": "A-032019-1:7,8,9" }];
+            //Using the alternative JSON format
+            $('#jstree_testData2').jstree({
+                'core': {
+                    'data': mimic2
+                }
+            });
+
+        </script>
+    </div>
+</body>
+</html>
