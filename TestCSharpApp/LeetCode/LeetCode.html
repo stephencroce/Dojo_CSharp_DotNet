@@ -108,23 +108,20 @@
                 {                    
                     //mathematical pattern: //f(i,j)=f(i−1,j−1)+f(i−1,j)
                     //base case
-                    if (row == 1) {
+                    if (col == 1 || col == row) {
                         triVal = 1;
-                        numberArray.push(triVal);
-                        returnArray.push(numberArray);
+                        numberArray.push(triVal);         
                     }
                     else
                     {
-                        if (row == 1 && col == endRow) {
-                            triVal = 1
-                        }
-                        else
-                        {
-                            triVal = 'formula ';
-                        }
-                        
+                        triVal = returnArray[row - 1, numberArray - 1] + returnArray[row - 1, numberArray]
+                        numberArray.push(triVal);
                     }
+                    returnArray.push(numberArray);
                 }
+                var newRow = parseInt(row) + 1;
+                triangle(newRow, 1);
+                
             }
             triangle(startRow, startCol);
             console.log("end Pascals Triangle");
