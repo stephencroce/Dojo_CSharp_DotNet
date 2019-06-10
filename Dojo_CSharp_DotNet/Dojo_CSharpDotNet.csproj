@@ -63,7 +63,7 @@
     </Reference>
     <Reference Include="SharpPieces.Web.Controls, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\SharpPieces.Web.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Local\Microsoft\VisualStudio\15.0_6e38a7b5\ProjectAssemblies\ngiv9ym201\SharpPieces.Web.Controls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
