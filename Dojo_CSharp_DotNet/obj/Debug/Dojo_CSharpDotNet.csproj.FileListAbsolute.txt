@@ -1,0 +1,2 @@
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\obj\Debug\Dojo_CSharpDotNet.csprojAssemblyReference.cache
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\obj\Debug\Dojo_CSharpDotNet.csproj.CoreCompileInputs.cache
