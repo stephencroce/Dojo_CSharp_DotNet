@@ -1,0 +1,53 @@
+﻿<div id="header">
+    <div style="padding-right: 15px; padding-top: 15px; padding-left: 10px;" id="logo">
+        <a href="/home.aspx">
+            <img src="/content/images/main_logo.jpg" alt="Contact Lens Spectrum" /></a></div>
+    <div id="quote">
+        <span class="blue" style="position: relative; left: 18px;">The Leading Clinical<br />
+            Contact Lens<br />
+            Information Source</span></div>
+    <div id="search">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" id="searchterm" name="searchterm" />
+                    </td>
+                    <td>
+                        <input type="button" class="smallbtn" value="search" onclick="javascript:GoSearch()" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--
+<a href="/dtSearch.aspx?mode=advanced">Advanced Search</a>
+-->
+    </div>
+    <div id="utilityLinks">
+        <div class="largebtn">
+            <a href="articleFeedbackIdeas.aspx">Article Feedback &amp; Ideas</a></div>
+        <a href="http://www.visioncareprofessional.com/">
+            <img style="padding-top: 10px;" src="/shared/VC_logo_4c205x38.jpg" alt="Springer VisionCare" /></a></div>
+</div>
+<script type="text/javascript">
+    //deal with default key when user strikes the return button on the keyboard:
+    $(document).ready(function () {
+        $("form input").keypress(function (e) {
+            if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                GoSearch();
+                return false;
+            }
+        });
+    });
+    function GoSearch() {
+
+        var search = document.getElementById('searchterm');
+        var v = document.getElementById('__VIEWSTATE');
+        if (v)
+            v.parentNode.removeChild(v);
+
+        if (search.value != '') {
+            window.top.location.href = "http://cls.visioncaredev.com/dtSearch.aspx?mode=basic&searchterm=" + search.value;
+        }
+    }
+</script>
