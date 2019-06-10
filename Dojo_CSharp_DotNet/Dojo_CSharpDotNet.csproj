@@ -1463,6 +1463,7 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="LogLog4NetExample.log" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -1475,6 +1476,7 @@
     <Content Include="Ticker\TickerRender.htm" />
     <Content Include="Ticker\TickerRender2.htm" />
     <Content Include="Ticker\Tickers.aspx" />
+    <Content Include="vcStyle.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1697,6 +1699,35 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="CKEdit\ckeditor_aspnet_3.6.4\CKEditor.NET\Properties\" />
+    <Folder Include="letterwizard\Images\Icons\" />
+    <Folder Include="letterwizard\Images\Logos\" />
+    <Folder Include="letterwizard\Images\MultiListBox\Frame\" />
+    <Folder Include="letterwizard\Images\MultiListBox\Hover\" />
+    <Folder Include="letterwizard\Images\MultiListBox\Normal\" />
+    <Folder Include="letterwizard\Images\MultiListBox\Selected\" />
+    <Folder Include="letterwizard\Images\Recipients\" />
+    <Folder Include="letterwizard\Letters\de\DE\" />
+    <Folder Include="letterwizard\Letters\en\US\" />
+    <Folder Include="letterwizard\Letters\es\ES\" />
+    <Folder Include="letterwizard\Letters\fr\BE\" />
+    <Folder Include="letterwizard\Letters\nl\BE\" />
+    <Folder Include="letterwizard\Scripts\" />
+    <Folder Include="letterwizard\Steps\" />
+    <Folder Include="letterwizard\Styles\" />
+    <Folder Include="letterwizard\Templates\de\DE\" />
+    <Folder Include="letterwizard\Templates\en\CA\HP\" />
+    <Folder Include="letterwizard\Templates\en\us\AstraZenaca\" />
+    <Folder Include="letterwizard\Templates\en\us\Brethren\" />
+    <Folder Include="letterwizard\Templates\en\us\CentralParking\" />
+    <Folder Include="letterwizard\Templates\en\us\Chubb\" />
+    <Folder Include="letterwizard\Templates\en\us\Donlen\" />
+    <Folder Include="letterwizard\Templates\en\us\Forest\" />
+    <Folder Include="letterwizard\Templates\en\us\Hershey\" />
+    <Folder Include="letterwizard\Templates\en\us\HP\" />
+    <Folder Include="letterwizard\Templates\en\us\Stillwater\" />
+    <Folder Include="letterwizard\Templates\fr\BE\" />
+    <Folder Include="letterwizard\Templates\fr\CA\HP\" />
+    <Folder Include="letterwizard\Templates\nl\BE\" />
     <Folder Include="Log\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
