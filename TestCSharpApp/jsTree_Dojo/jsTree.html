@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jsTree test</title>
+    <!-- 2 load the theme CSS file -->
+    <link rel="stylesheet" href="lib/jsTree/dist/themes/default/style.min.css" />
+    <link rel="stylesheet" href="lib/jquery-file-tree/jqueryFileTree.css" />
+</head>
+<body>
+    <!-- 3 setup a container element -->
+    <div id="jstree" style="border:dashed yellow 2px;">
+        <!-- in this example the tree is populated from inline HTML -->
+        <ul>
+            <li>
+                Root node 1
+                <ul>
+                    <li id="child_node_1">Child node 1</li>
+                    <li>Child node 2</li>
+                </ul>
+            </li>
+            <li>Root node 2</li>
+        </ul>
+    </div>
+    <button>demo button</button>
+
+    <!-- 4 include the jQuery library -->
+
+    <script src="lib/jsTree/dist/libs/jquery.js"></script>
+    <!-- 5 include the minified jstree source -->
+    <script src="lib/jsTree/dist/jstree.min.js"></script>
+
+    <!--6 mimic UDC includes -->
+    <script src="lib/lou-multi-select/dist/js/jquery.multi-select.js"></script>
+    <script src="lib/jquery-file-tree/jquery.easing.js"></script>
+    <script src="lib/jquery-file-tree/jqueryFileTree.js"></script>
+
+    <div id="#targetRuns" style="border:1px green dashed"></div>
+    <div id="#jstree_demo" style="border:1px orange dashed"></div>
+    <div id="#using_json" style="border:1px blue dashed"></div>
+    <div id="#tree" style="border:1px red dashed"></div>
+
+    <script>
+
+        $(function () {
+            // 6 create an instance when the DOM is ready
+            $('#jstree').jstree();
+
+            // 7 bind to events triggered on the tree
+            $('#jstree').on("changed.jstree", function (e, data) {
+                console.log(data.selected);
+            });
+
+            // 8 interact with the tree - either way is OK
+            $('button').on('click', function () {
+                //these all do the same thing....
+                //$('#jstree').jstree(true).select_node('child_node_1');
+                $('#jstree').jstree('select_node', 'child_node_1');
+                //$.jstree.reference('#jstree').select_node('child_node_1');
+            });
+
+        });
+    </script>
+    <script>
+
+        var targets = [
+            {
+                "text": "Accl Factor",
+                "id": "r4",
+                "fullPath": null,
+                "type": null,
+                "children": []
+            },
+            {
+                "text": "SDC - Blue",
+                "id": "r312",
+                "fullPath": null,
+                "type": null,
+                "children": []
+            },
+            {
+                "text": "UDC-Blue",
+                "id": "r97",
+                "fullPath": null,
+                "type": null,
+                "children": []
+            },
+            {
+                "text": "UDC-RG",
+                "id": "r96",
+                "fullPath": null,
+                "type": null,
+                "children": []
+            },
+            {
+                "text": "White",
+                "id": "r14",
+                "fullPath": null,
+                "type": null,
+                "children": [
+                    {
+                        "id": "s6939",
+                        "text": "6-050819-1",
+                        "type": null,
+                        "keywords": null,
+                        "fullPath": null,
+                        "children": [
+                            {
+                                "id": "c100",
+                                "text": "6-050819-1:1,2,3,4,5,6,7,8,9",
+                                "type": null,
+                                "keywords": null,
+                                "fullPath": null,
+                                "children": [],
+                                "li_attr": {
+                                    "class": "target-run-node"
+                                }
+                            }
+                        ],
+                        "li_attr": {
+                            "class": "target-run-node"
+                        }
+                    }
+                ]
+            }
+        ]
+
+        $('#using_json').jstree({
+            'core': {
+                'data': [
+                    'Simple root node',
+                    {
+                        'text': 'Root node 2',
+                        'state': {
+                            'opened': true,
+                            'selected': true
+                        },
+                        'children': [
+                            { 'text': 'Child 1' },
+                            'Child 2'
+                        ]
+                    }
+                ]
+            }
+        });
+
+        $('#targetRuns').jstree({
+            'core': {
+                'data': [
+                    { "id": "ajson1", "parent": "#", "text": "Simple root node" },
+                    { "id": "ajson2", "parent": "#", "text": "Root node 2" },
+                    { "id": "ajson3", "parent": "ajson2", "text": "Child 1" },
+                    { "id": "ajson4", "parent": "ajson2", "text": "Child 2" },
+                ]
+            }
+        });
+
+        $('#tree').jstree({
+            'core': {
+                'data': function (obj, cb) {
+                    cb.call(this,
+                        ['Root 1', 'Root 2']);
+                }
+            }
+        });
+
+
+                    ////bind data
+                    //$("#targetRuns")
+                    //    .jstree({
+                    //        "core": {
+                    //            "data": targets,
+                    //            'check_callback': function (operation, node, node_parent, node_position, more) {
+                    //                if (more) {
+
+                    //                    //console.log("target - node_position = " + node_position)
+                    //                    //console.log('nodeparent = ' + JSON.stringify(node_parent));
+                    //                    //console.log('more.ref = ' + JSON.stringify(more.ref));
+                    //                    //if (node_parent.id === "#")             //disallow dropping to root level
+                    //                    // return false;
+
+                    //                    if (more.is_multi) {
+                    //                        dragNode = node;
+                    //                        more.origin.settings.dnd.always_copy = true;
+                    //                    } else {
+                    //                        more.origin.settings.dnd.always_copy = false;
+                    //                    }
+                    //                } else {
+                    //                    console.log('more not defined');
+                    //                }
+
+                    //                $("#sourceRuns").jstree().deselect_all(true);
+
+                    //                return true;
+
+                    //            },
+                    //        },
+                    //        "dnd": {
+                    //            check_while_dragging: true
+                    //        },
+                    //        "types": {
+                    //            "#": {
+                    //                "valid_children": "none"
+                    //            },
+                    //            "r": {
+                    //                "valid_children": ["rs", "rn", "c"]
+                    //            },
+                    //            "rs": {
+                    //                "valid_children": "none"
+                    //            },
+                    //            "rn": {
+                    //                "valid_children": "none"
+                    //            }
+                    //            ,
+                    //            "c": {
+                    //                "valid_children": "none"
+                    //            }
+                    //        },
+
+                    //        "plugins": ["dnd", "sort", "types"],
+
+                    //        "unique": {
+                    //            //"duplicate": function (name, counter) {
+                    //            //   return false;
+                    //            //}
+
+                    //        }
+                    //    });
+
+
+
+    </script>
+    <script>
+
+                                //$('#jstree_demo').jstree({
+                                //    "core": {
+                                //        "animation": 0,
+                                //        "check_callback": true,
+                                //        "themes": { "stripes": true },
+                                //        'data': {
+                                //            'url': function (node) {
+                                //                return node.id === '#' ?
+                                //                    'ajax_demo_roots.json' : 'ajax_demo_children.json';
+                                //            },
+                                //            'data': function (node) {
+                                //                return { 'id': node.id };
+                                //            }
+                                //        }
+                                //    },
+                                //    "types": {
+                                //        "#": {
+                                //            "max_children": 1,
+                                //            "max_depth": 4,
+                                //            "valid_children": ["root"]
+                                //        },
+                                //        "root": {
+                                //            "icon": "/static/3.3.8/assets/images/tree_icon.png",
+                                //            "valid_children": ["default"]
+                                //        },
+                                //        "default": {
+                                //            "valid_children": ["default", "file"]
+                                //        },
+                                //        "file": {
+                                //            "icon": "glyphicon glyphicon-file",
+                                //            "valid_children": []
+                                //        }
+                                //    },
+                                //    "plugins": [
+                                //        "contextmenu", "dnd", "search",
+                                //        "state", "types", "wholerow"
+                                //    ]
+                                //});
+
+
+    </script>
+</body>
+</html>

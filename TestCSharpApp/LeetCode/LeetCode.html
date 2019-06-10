@@ -9,7 +9,7 @@
         this is leetcode javascript stupid stuff
     </div>
     <div>
-        <button onclick="console.log(generateTriangle(window.document.getElementById('txtNumRows').value));">Do Triangle</button>
+        <button onclick="generateTriangle(window.document.getElementById('txtNumRows').value);">Do Triangle</button>
         <input type="text" id="txtNumRows" />
     </div>
     <script>
@@ -64,7 +64,7 @@
         };
     </script>
     <script id="leetCode_PascalsTriangle">
-        console.log("begin Pascals Triangle");
+        //console.log("begin Pascals Triangle");
         //Given a non - negative integer numRows, generate the first numRows of Pascal's triangle.
         //In Pascal's triangle, each number is the sum of the two numbers directly above it.
 
@@ -85,43 +85,51 @@
         */
 
 
-        var generateTriangle = function (numRows) {
+        function generateTriangle(numRows) {
+            console.log("begin Pascals Triangle");
             //alert(numRows);
             var startRow = 1;
-            var endRow = numRows;
-            var number = [];
-            var returnVal = [];
+            var startCol = 1;
+            var endRow = parseInt(numRows);
+            var numberArray = [];
+            var returnArray = [];
+            var triVal;
 
-            //base cases
-            if (endRow == 1) {
-                number.push(endRow);
-                returnVal.push(number);
-                return returnVal;
-            }
-            else {
-                if (endRow == 2) {
-                    number.push(1);
-                    number.push(1);
-                    returnVal.push(number);
-                   // return returnVal;
-                }
-                if (startRow == endRow) {
-                    return returnVal;
-                }
-            }
-            //recursive case
             var triangle = function (row, col) {
-                //f(i,j)=f(i−1,j−1)+f(i−1,j)
-                var triVal = triangle(startRow - 1, endRow - 1) + triangle(startRow - 1, endRow);
-                number.push(triVal);
-                returnVal.push(number);
-                startRow++;                
+                
+                //if this criteria is met, then stop the function.
+                if (row == endRow) {
+                    numberArray.push(row);
+                    returnArray.push(numberArray);
+                    console.log(JSON.stringify(returnArray));
+                    return returnArray;
+                }
+                else
+                {                    
+                    //mathematical pattern: //f(i,j)=f(i−1,j−1)+f(i−1,j)
+                    //base case
+                    if (col == 1 || col == row) {
+                        triVal = 1;
+                        numberArray.push(triVal);         
+                    }
+                    else
+                    {
+                        triVal = returnArray[row - 1, numberArray - 1] + returnArray[row - 1, numberArray]
+                        numberArray.push(triVal);
+                    }
+                    returnArray.push(numberArray);
+                }
+                var newRow = parseInt(row) + 1;
+                triangle(newRow, 1);
+                
             }
+            triangle(startRow, startCol);
+            console.log("end Pascals Triangle");
         };
         //main
-        console.log(generateTriangle(1));
-        console.log(JSON.stringify(generateTriangle(1)));
-        console.log("end Pascals Triangle");
+        //console.log(generateTriangle(1));
+        //console.log(JSON.stringify(generateTriangle(1)));
+        //console.log("end Pascals Triangle");
 
     </script>
 </body>

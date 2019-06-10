@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <!--THIS SHIT DOESN'T WORK IN THE UDC ENVIRONMENT LIKE IT DOES HERE.  MUST BE SOME SORT OF VERSION CONFLICT conerning the below so I gave up on it -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+
+
+
+
+    <fieldset class="dreamT">
+
+        <select name="team" id="team" multiple class="dropdown selectpicker show-menu-arrow show-tick form-control" 
+                title="JackAss" data-width="100%" data-size="auto" 
+                multiple data-selected-text-format="count > 2">
+            <optgroup>
+                <option value="item 1">Item 1</option>
+                <option value="item 2">Item 2</option>
+                <option value="item 3">Item 3</option>
+                <option value="item 4">Item 4</option>
+                <option value="item 5">Item 5</option>
+                <option disabled value="item 6">Item 6</option>
+            </optgroup>
+        </select>
+    </fieldset>
+
+    <script language="javascript">
+
+        $(function () {
+            $("#team").on("changed.bs.select", function (e, clickedIndex, newValue, oldValue) {
+                var selectedD = $(this).find('option').eq(clickedIndex).text();
+                //console.log('selectedD: ' + selectedD + '  newValue: ' + newValue + ' oldValue: ' + oldValue);
+                alert('selectedD: ' + selectedD + '  newValue: ' + newValue + ' oldValue: ' + oldValue);
+            });
+        });
+
+        //$(".selectpicker").on("changed.bs.select", function (e, clickedIndex, newValue, oldValue) {
+        //    var sel = $(this).find('option').eq(clickedIndex).val();
+        //    console.log(sel + " " + newValue);
+        //});
+
+
+    </script>
+
+</body>
+</html>
