@@ -6,11 +6,14 @@
 </head>
 <body>
     <div>
-        this is leetcode javascript stupid stuff
+        this is the leetcode javascript dojo workspace::
     </div>
     <div>
         <button onclick="generateTriangle(window.document.getElementById('txtNumRows').value);">Do Triangle</button>
         <input type="text" id="txtNumRows" />
+        <div id="answerBox" style="border:dashed orange 1px; width:400px; height:400px;">
+
+        </div>
     </div>
     <script>
         console.log("begin factorial");
@@ -94,6 +97,8 @@
             var numberArray = [];
             var returnArray = [];
             var triVal;
+            var answerBox = window.document.getElementById("answerBox");
+            answerBox.innerHTML = "";
 
             var triangle = function (row, col) {
                 
@@ -102,6 +107,7 @@
                     numberArray.push(row);
                     returnArray.push(numberArray);
                     console.log(JSON.stringify(returnArray));
+                    answerBox.innerHTML = JSON.stringify(returnArray);
                     return returnArray;
                 }
                 else
@@ -117,7 +123,7 @@
                         triVal = returnArray[row - 1, numberArray - 1] + returnArray[row - 1, numberArray]
                         numberArray.push(triVal);
                     }
-                    returnArray.push(numberArray);
+                    returnArray.push(numberArray);                    
                 }
                 var newRow = parseInt(row) + 1;
                 triangle(newRow, 1);
