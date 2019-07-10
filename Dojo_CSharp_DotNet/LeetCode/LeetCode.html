@@ -71,8 +71,12 @@
         //Given a non - negative integer numRows, generate the first numRows of Pascal's triangle.
         //In Pascal's triangle, each number is the sum of the two numbers directly above it.
         //This whole thing can be thought of as a 2-D array
+        //http://www-ee.eng.hawaii.edu/~tep/EE160/Notes/Array/2darray.html
 
-        //Input: 5
+        //https://www.javascripttutorial.net/javascript-multidimensional-array/
+        //https://stackoverflow.com/questions/18163234/declare-an-empty-two-dimensional-array-in-javascript
+
+        //Input: 6
         //Output:
         //[
         //        [1],
@@ -93,43 +97,51 @@
             var startRow = 1;
             var startCol = 1;
             var endRow = parseInt(numRows);            
+            var rowArray = [];
             var returnArray = [];
             var triVal;
             var answerBox = window.document.getElementById("answerBox");
             answerBox.innerHTML = "begin Pascals Triangle :: ";
 
-            var triangle = function (row, col) {
-
-                //i guess i don't quite understand javascript multi dimensional array behavior.....
-                returnArray[row] = new Array(row + 1);
-                
+            var triangle = function (row, col) {                
                 //base case
                 if (col == 1 || col == row) {   //If the element is the either first or last element then initialize it with 1
-                    triVal = 1;
-                    returnArray[row][col] = triVal;                        
-                }
-                else  //Else initialize it with the sum of the elements from previous row
-                {
-                    //mathematical pattern: //f(i,j)=f(i−1,j−1)+f(i−1,j)
-                    triVal = returnArray[row - 1, returnArray - 1] + returnArray[row - 1, returnArray]
-                    returnArray[row][col] = triVal;              
-                } 
+                    if (col == 1) {
+                        rowArray = [];
+                    }
+                    triVal = 1;                    
+                    rowArray.push(triVal);
 
-                if (row == endRow) { //stop the function and return
+                    if (col == row) {                        
+                        returnArray.push(rowArray);
+                    }
+                }
+                else {
+                    //calc
+                    //mathematical pattern: //f(i,j)=f(i−1,j−1)+f(i−1,j)
+                    //triVal = returnArray[row - 1, col - 1] + returnArray[row - 1, col];
+                    //triVal = returnArray[row - 1, col - 1] + typeof (returnArray[row - 1, col]) === "undefined" ? 0 : returnArray[row - 1, col];                    
+                    //triVal = returnArray[row - 2][col - 2] + typeof (returnArray[row - 2][col-1]) === "undefined" ? 0 : returnArray[row - 2][col-1];
+                    triVal = returnArray[row - 2][col - 2] + returnArray[row - 2][col - 1];
+                    triVal = typeof (triVal === "undefined") ? 1 : triVal;
+                    rowArray.push(triVal);           
+                }
+                if (col==row && row == endRow) { //stop the function and return                    
                     return returnArray;
                 }
                 else
                 {
-                    if (col == row) {                    
-                        triangle(parseInt(row) + 1, 1);                    
+                    if (col == row) {
+                        col = 1;
+                        row = row + 1;
+                    } else {
+                        col = col + 1;
                     }
-                    else {                        
-                        triangle(row, parseInt(col) + 1);
-                    }              
+                    triangle(row, col);
                 }
             }
             triangle(startRow, startCol);
-            console.log(returnArray);
+            console.log(JSON.stringify(returnArray));
             console.table(returnArray);  //cool beans.  how about that...  //https://js-algorithms.tutorialhorizon.com/2015/11/24/pascals-triangle/
             console.log("end Pascals Triangle");
             answerBox.innerHTML = answerBox.innerHTML + JSON.stringify(returnArray);
