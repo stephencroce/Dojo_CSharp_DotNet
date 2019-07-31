@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,11 +6,14 @@
 </head>
 <body>
     <div>
-        this is leetcode javascript stupid stuff
+        this is the leetcode javascript dojo workspace::
     </div>
     <div>
         <button onclick="generateTriangle(window.document.getElementById('txtNumRows').value);">Do Triangle</button>
         <input type="text" id="txtNumRows" />
+        <div id="answerBox" style="border:dashed orange 1px; width:400px; height:400px;">
+
+        </div>
     </div>
     <script>
         console.log("begin factorial");
@@ -67,8 +70,13 @@
         //console.log("begin Pascals Triangle");
         //Given a non - negative integer numRows, generate the first numRows of Pascal's triangle.
         //In Pascal's triangle, each number is the sum of the two numbers directly above it.
+        //This whole thing can be thought of as a 2-D array
+        //http://www-ee.eng.hawaii.edu/~tep/EE160/Notes/Array/2darray.html
 
-        //Input: 5
+        //https://www.javascripttutorial.net/javascript-multidimensional-array/
+        //https://stackoverflow.com/questions/18163234/declare-an-empty-two-dimensional-array-in-javascript
+
+        //Input: 6
         //Output:
         //[
         //        [1],
@@ -84,47 +92,62 @@
         * @return {number[][]}
         */
 
-
         function generateTriangle(numRows) {
-            console.log("begin Pascals Triangle");
-            //alert(numRows);
+            console.log("begin Pascals Triangle");                        
             var startRow = 1;
             var startCol = 1;
-            var endRow = parseInt(numRows);
-            var numberArray = [];
+            var endRow = parseInt(numRows);            
+            var rowArray = [];
             var returnArray = [];
             var triVal;
+            var answerBox = window.document.getElementById("answerBox");
+            answerBox.innerHTML = "begin Pascals Triangle :: ";
 
-            var triangle = function (row, col) {
-                
-                //if this criteria is met, then stop the function.
-                if (row == endRow) {
-                    numberArray.push(row);
-                    returnArray.push(numberArray);
-                    console.log(JSON.stringify(returnArray));
+            var triangle = function (row, col) {                
+                //base case
+                if (col == 1 || col == row) {   //If the element is the either first or last element then initialize it with 1
+                    if (col == 1) {
+                        rowArray = [];
+                    }
+                    triVal = 1;                    
+                    rowArray.push(triVal);
+
+                    if (col == row) {                        
+                        returnArray.push(rowArray);
+                    }
+                }
+                else {
+                    //calc
+                    //mathematical pattern: //f(i,j)=f(i−1,j−1)+f(i−1,j)
+                    //triVal = returnArray[row - 1, col - 1] + returnArray[row - 1, col];
+                    //triVal = returnArray[row - 1, col - 1] + typeof (returnArray[row - 1, col]) === "undefined" ? 0 : returnArray[row - 1, col];                    
+                    //triVal = returnArray[row - 2][col - 2] + typeof (returnArray[row - 2][col-1]) === "undefined" ? 0 : returnArray[row - 2][col-1];
+                    //triVal = returnArray[row - 1][col - 1] + returnArray[row - 1][col];
+                    //triVal = returnArray[row - 1][col - 2] + returnArray[row - 1][col - 2];
+                    triVal = returnArray[row - 2][col - 2] + returnArray[row - 2][col - 1]
+                    triVal = typeof (triVal) === "undefined" ? 1 : triVal;
+                    rowArray.push(triVal);           
+                }
+                if (col==row && row == endRow) { //stop the function and return                    
                     return returnArray;
                 }
                 else
-                {                    
-                    //mathematical pattern: //f(i,j)=f(i−1,j−1)+f(i−1,j)
-                    //base case
-                    if (col == 1 || col == row) {
-                        triVal = 1;
-                        numberArray.push(triVal);         
+                {
+                    if (col == row) {
+                        col = 1;
+                        row = row + 1;
+                    } else {
+                        col = col + 1;
                     }
-                    else
-                    {
-                        triVal = returnArray[row - 1, numberArray - 1] + returnArray[row - 1, numberArray]
-                        numberArray.push(triVal);
-                    }
-                    returnArray.push(numberArray);
+                    triangle(row, col);
                 }
-                var newRow = parseInt(row) + 1;
-                triangle(newRow, 1);
-                
             }
             triangle(startRow, startCol);
+            console.log(JSON.stringify(returnArray));
+            console.table(returnArray);  //cool beans.  how about that...  //https://js-algorithms.tutorialhorizon.com/2015/11/24/pascals-triangle/
             console.log("end Pascals Triangle");
+            answerBox.innerHTML = answerBox.innerHTML + JSON.stringify(returnArray);
+            answerBox.innerHTML = answerBox.innerHTML + " :: end Pascals Triangle";
         };
         //main
         //console.log(generateTriangle(1));

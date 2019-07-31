@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -6,5 +6,79 @@
 </head>
 <body>
     hi i am stupid.
+    <div id="myDiv"></div>
+    <div id="myDiv2"></div>
 </body>
 </html>
+<script language="javascript">
+    var myDiv = window.document.getElementById("myDiv");
+    var myDiv2 = window.document.getElementById("myDiv2");
+    //myDiv.innerHTML = "Yes. I know.";
+    var nudnick = function (type) {
+        var retVal;
+        switch (type) {
+            case 1:
+                retVal = 'dingbat';
+                break;
+            case 2:
+                retVal = 'dumkopf';
+                break;
+            default:
+                retVal = 'nudnick';
+        }
+
+        return retVal;
+    }
+    myDiv.innerHTML = nudnick(2);
+
+    
+ /**
+ * @param {number} numRows
+ * @return {number[][]}
+ */
+    var generate = function (numRows) {
+        var startRow = 1;
+        var startCol = 1;
+        var endRow = parseInt(numRows);
+        var rowArray = [];
+        var returnArray = [];
+        var triVal;
+
+        var triangle = function (row, col) {
+            //base case
+            if (col == 1 || col == row) {   //If the element is the either first or last element then initialize it with 1
+                if (col == 1) {
+                    rowArray = [];
+                }
+                triVal = 1;
+                rowArray.push(triVal);
+
+                if (col == row) {
+                    returnArray.push(rowArray);
+                }
+            }
+            else {
+                //calc
+                triVal = returnArray[row - 2][col - 2] + returnArray[row - 2][col - 1]
+                triVal = typeof (triVal) === "undefined" ? 1 : triVal;
+                rowArray.push(triVal);
+            }
+            if (col == row && row == endRow) { //stop the function and return                    
+                return returnArray;
+            }
+            else {
+                if (col == row) {
+                    col = 1;
+                    row = row + 1;
+                } else {
+                    col = col + 1;
+                }
+                triangle(row, col);
+            }
+        }
+        triangle(startRow, startCol);
+    };
+    myDiv2.innerHTML = JSON.stringify(generate(3));
+
+
+</script>

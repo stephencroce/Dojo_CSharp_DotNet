@@ -1,0 +1,1740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{930E1BF9-B6A8-4768-9602-9DA26DC5A27F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestCSharpApp</RootNamespace>
+    <AssemblyName>TestCSharpApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax, Version=5.7.20.2, Culture=neutral">
+      <HintPath>..\packages\ajax.dll.1.0.0\lib\net20\Ajax.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClassLibraryHack, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClassLibraryHack.1.0.0.2\lib\net45\ClassLibraryHack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpPieces.Web.Controls, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SharpPieces.Web.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\Ajax.htm" />
+    <Content Include="Ajax\ajaxReturn.aspx" />
+    <Content Include="Ajax\ajax_info.txt" />
+    <Content Include="bin\CKEditor.NET.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\log4net.xml" />
+    <Content Include="CKEdit\CKEdit.aspx" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\adapters\jquery.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\CHANGES.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor.asp" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor_basic.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor_basic_source.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor_source.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\config.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\contents.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\images\spacer.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\INSTALL.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\af.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ar.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\bn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\bs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ca.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\en-au.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\en-ca.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\en-gb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\es.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\eu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\fo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\fr-ca.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\gl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\hi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\hu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\id.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\is.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ja.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ka.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\km.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ko.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\lt.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\lv.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\mn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ms.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\pt.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ro.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ru.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\sl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\sr-latn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\sr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\sv.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\th.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\zh.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\_languages.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\LICENSE.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\preview\preview.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\dialog.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\editor.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\icons.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\skin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\kama\templates.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\editor.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\icons.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\skin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\office2003\templates.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\dialog.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\editor.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\icons.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\skin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\skins\v2\templates.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\themes\default\theme.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\adobeair\application.xml" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\adobeair\sample.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\ajax.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\api.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\api_dialog.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\api_dialog\my_dialog.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\asp\advanced.asp" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\asp\events.asp" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\asp\index.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\asp\replace.asp" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\asp\replaceall.asp" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\asp\sample_posteddata.asp" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\asp\standalone.asp" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\assets\output_for_flash.swf" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\assets\output_xhtml.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\assets\parsesample.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\assets\swfobject.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\autogrow.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\bbcode.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\devtools.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\divreplace.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\enterkey.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\fullpage.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\index.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\jqueryadapter.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\output_for_flash.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\output_html.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\output_xhtml.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\php\index.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\placeholder.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\readonly.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\replacebyclass.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\replacebycode.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\sample.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\sample.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\sharedspaces.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\skins.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\stylesheetparser.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\tableresize.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\ui_color.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\ui_languages.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\adapters\jquery.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\ckeditor.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\ckeditor_base.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\ckeditor_basic.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\command.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\commanddefinition.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\config.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dataprocessor.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\comment.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\document.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\documentfragment.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\domobject.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\element.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\elementpath.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\event.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\node.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\nodelist.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\range.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\rangelist.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\text.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\walker.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dom\window.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\dtd.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\editor.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\editor_basic.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\env.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\event.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\eventInfo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\focusmanager.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\htmlparser.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\htmlparser\basicwriter.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\htmlparser\cdata.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\htmlparser\comment.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\htmlparser\element.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\htmlparser\filter.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\htmlparser\fragment.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\htmlparser\text.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\lang.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\loader.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\plugindefinition.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\plugins.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\resourcemanager.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\scriptloader.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\skins.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\themes.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\tools.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\ui.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\core\_bootstrap.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\af.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ar.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\bn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\bs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ca.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\en-au.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\en-ca.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\en-gb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\es.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\eu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\fo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\fr-ca.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\gl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\hi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\hu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\id.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\is.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ja.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ka.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\km.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ko.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\lt.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\lv.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\mn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ms.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\pt.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ro.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ru.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\sl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\sr-latn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\sr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\sv.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\th.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\zh.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\_languages.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\a11yhelp\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\about\dialogs\about.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\about\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\adobeair\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\ajax\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\autogrow\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\basicstyles\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\bbcode\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\bidi\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\blockquote\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\button\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\clipboard\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\colorbutton\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\colordialog\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\contextmenu\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\devtools\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\dialogadvtab\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\dialogui\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\dialog\dialogDefinition.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\dialog\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\div\dialogs\div.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\div\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\docprops\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\domiterator\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\editingblock\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\elementspath\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\enterkey\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\entities\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\fakeobjects\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\filebrowser\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\find\dialogs\find.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\find\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\flash\dialogs\flash.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\flash\images\placeholder.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\flash\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\floatpanel\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\font\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\format\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\dialogs\button.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\dialogs\form.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\dialogs\radio.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\dialogs\select.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\dialogs\textarea.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\dialogs\textfield.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\forms\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\horizontalrule\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\htmldataprocessor\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\htmlwriter\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\iframedialog\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\iframe\images\placeholder.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\iframe\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\image\dialogs\image.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\image\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\indent\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\justify\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\keystrokes\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\link\dialogs\anchor.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\link\dialogs\link.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\link\images\anchor.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\link\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\listblock\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\liststyle\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\list\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\maximize\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\menubutton\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\menu\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\newpage\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\pagebreak\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\panelbutton\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\panel\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\pastefromword\filter\default.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\pastefromword\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\pastetext\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\placeholder.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\placeholder\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\popup\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\preview\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\preview\preview.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\print\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\removeformat\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\resize\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\richcombo\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\save\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\scayt\dialogs\options.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\scayt\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\selection\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_address.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_div.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_h1.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_h2.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_h3.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_h4.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_h5.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_h6.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_p.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\images\block_pre.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showblocks\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\showborders\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\envelope.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\heart.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\kiss.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\smiley\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\sourcearea\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\specialchar\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\stylescombo\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\stylesheetparser\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\styles\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\styles\styles\default.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\tableresize\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\tabletools\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\table\dialogs\table.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\table\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\tab\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\templates\dialogs\templates.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\templates\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\templates\templates\default.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\templates\templates\images\template1.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\templates\templates\images\template2.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\templates\templates\images\template3.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\toolbar\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\ku.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\uicolor.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\uicolor\yui\yui.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\undo\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\wsc\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\wysiwygarea\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\plugins\xml\plugin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\dialog.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\editor.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\elementspath.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\icons.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\icons.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\images\toolbar_start.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\mainui.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\menu.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\panel.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\presets.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\reset.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\richcombo.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\skin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\templates.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\kama\toolbar.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\dialog.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\editor.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\elementspath.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\icons.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\icons.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\mainui.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\menu.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\panel.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\presets.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\reset.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\richcombo.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\skin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\templates.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\office2003\toolbar.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\dialog.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\editor.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\elementspath.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\icons.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\icons.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\images\toolbar_start.gif" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\mainui.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\menu.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\panel.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\presets.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\reset.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\richcombo.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\skin.js" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\templates.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\skins\v2\toolbar.css" />
+    <Content Include="CKEdit\ckeditor_3.6.5\ckeditor\_source\themes\default\theme.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\CHANGES.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\CKEditor.NET.sln" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\CKEditor.NETwithSamples.sln" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\CKEditor.NET\CKEditor.NET.csproj" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\INSTALL.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\LICENSE.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\AttachEvents.aspx" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\adapters\jquery.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\CHANGES.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\ckeditor.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\ckeditor_basic.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\config.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\contents.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\images\spacer.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\INSTALL.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\af.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ar.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\bn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\bs.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ca.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\en-au.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\en-ca.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\en-gb.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\es.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\eu.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\fo.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\fr-ca.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\gl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\hi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\hu.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\id.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\is.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ja.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ka.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\km.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ko.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\lt.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\lv.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\mn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ms.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\pt.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ro.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ru.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\sk.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\sl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\sr-latn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\sr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\sv.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\th.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\zh.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\_languages.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\LICENSE.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\preview\preview.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\dialog.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\editor.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\icons.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\skin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\kama\templates.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\editor.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\icons.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\skin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\office2003\templates.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\dialog.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\editor.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\icons.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\skin.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\skins\v2\templates.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\themes\default\theme.js" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\Default.aspx" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\FirstUse.aspx" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\sample.css" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\SampleConfig.aspx" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\SharedSpaces.aspx" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\SubmitData.aspx" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ToolbarDefine.aspx" />
+    <Content Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\web.config" />
+    <Content Include="CSCrap\BigO.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="ExtensionMethodFun\ExtensionMethodCrap.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HTMLPage2.htm" />
+    <Content Include="HTML\CacheBuster.htm" />
+    <Content Include="HTML\CEI\ChubbLetterSampleNTSVR76BOptimized.html" />
+    <Content Include="HTML\TechnoFucks\CLSCoverImageTransformation.htm" />
+    <Content Include="HTML\TechnoFucks\dtSearch_VisionCare_Advanced.htm" />
+    <Content Include="HTML\TechnoFucks\DigitalSupp.htm" />
+    <Content Include="HTML\TechnoFucks\dtSearch_VisionCare.htm" />
+    <Content Include="HTML\TechnoFucks\EB-Facebook.htm" />
+    <Content Include="HTML\TechnoFucks\EB-Ads.htm" />
+    <Content Include="HTML\TechnoFucks\EB-Facebook2.htm" />
+    <Content Include="HTML\TechnoFucks\EBHome.htm" />
+    <Content Include="HTML\TechnoFucks\EBHomePageTemplate.htm" />
+    <Content Include="HTML\TechnoFucks\EBJumpMenu.htm" />
+    <Content Include="HTML\TechnoFucks\EBLeft.htm" />
+    <Content Include="HTML\TechnoFucks\EBMaster.htm" />
+    <Content Include="HTML\TechnoFucks\EBSearch.htm" />
+    <Content Include="HTML\TechnoFucks\HTMLPage1.htm" />
+    <Content Include="HTML\TechnoFucks\HTMLPage3.htm" />
+    <Content Include="HTML\TechnoFucks\HTMLPage4.htm" />
+    <Content Include="HTML\images\bulb.png" />
+    <Content Include="HTML\TechnoFucks\OMNewOD-OLDPROD.htm" />
+    <Content Include="HTML\TechnoFucks\OMNewODPROD.htm" />
+    <Content Include="HTML\TechnoFucks\OMSearch.htm" />
+    <Content Include="HTML\TechnoFucks\OMHeader.htm" />
+    <Content Include="HTML\TechnoFucks\OMMgmtTipOfWeek.htm" />
+    <Content Include="HTML\TechnoFucks\OMTopics.htm" />
+    <Content Include="HTML\TechnoFucks\Squish191a.htm" />
+    <Content Include="HTML\TechnoFucks\Squish395.htm" />
+    <Content Include="HTML\TechnoFucks\Squish435b.htm" />
+    <Content Include="HTML\TechnoFucks\Squish438.htm" />
+    <Content Include="HTML\TechnoFucks\Squish438a.htm" />
+    <Content Include="HTML\TechnoFucks\Squish544.htm" />
+    <Content Include="HTML\UDC\ArraySplit.html" />
+    <Content Include="HTML\UDC\selectPickerHacking.html" />
+    <Content Include="IEnumerable.aspx" />
+    <Content Include="jQueryCrap\jQueryBasicDialog.htm" />
+    <Content Include="jQueryCrap\jQueryEasyConfirmDialog.htm" />
+    <Content Include="jQueryCrap\jQueryTriggerBind.htm" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\.htaccess" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor.pack" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor_php4.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\ckeditor_php5.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\adobeair\run.bat" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\adobeair\run.sh" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\assets\output_for_flash.fla" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\assets\_posteddata.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\php\advanced.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\php\events.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\php\replace.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\php\replaceall.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\php\standalone.php" />
+    <None Include="CKEdit\ckeditor_3.6.5\ckeditor\_samples\sample_posteddata.php" />
+    <None Include="CKEdit\ckeditor_aspnet_3.6.4\CKEditor.NET\CKEditorStrongKey.snk" />
+    <None Include="CKEdit\ckeditor_aspnet_3.6.4\_Samples\ckeditor\.htaccess" />
+    <Content Include="jsTree_Dojo\jsTreeWTF2.html" />
+    <Content Include="jsTree_Dojo\jsTreeWTF.html" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\libs\core.js" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\libs\jquery.js" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\libs\jquery.min.js" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\libs\jquery.slim.js" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\libs\jquery.slim.min.js" />
+    <Content Include="jsTree_Dojo\lib\lou-multi-select\dist\css\multi-select.dev.css.map" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\libs\jquery.min.map" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\libs\jquery.slim.min.map" />
+    <None Include="log4netMYTEST.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="jsTree_Dojo\jsTree.html" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\application.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\code.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\css.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\db.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\directory.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\doc.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\file.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\film.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\flash.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\folder_open.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\html.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\java.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\linux.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\music.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\pdf.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\php.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\picture.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\ppt.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\psd.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\ruby.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\script.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\spinner.gif" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\txt.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\xls.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\xlsm.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\images\zip.png" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\jquery.easing.js" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\jqueryFileTree.css" />
+    <Content Include="jsTree_Dojo\lib\jquery-file-tree\jqueryFileTree.js" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\jstree.js" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\jstree.min.js" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default-dark\32px.png" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default-dark\40px.png" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default-dark\style.css" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default-dark\style.min.css" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default-dark\throbber.gif" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default\32px.png" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default\40px.png" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default\style.css" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default\style.min.css" />
+    <Content Include="jsTree_Dojo\lib\jsTree\dist\themes\default\throbber.gif" />
+    <Content Include="jsTree_Dojo\lib\lou-multi-select\dist\css\multi-select.css" />
+    <Content Include="jsTree_Dojo\lib\lou-multi-select\dist\css\multi-select.dev.css" />
+    <Content Include="jsTree_Dojo\lib\lou-multi-select\dist\css\multi-select.dist.css" />
+    <Content Include="jsTree_Dojo\lib\lou-multi-select\dist\img\switch.png" />
+    <Content Include="jsTree_Dojo\lib\lou-multi-select\dist\js\jquery.multi-select.js" />
+    <Content Include="js\chili-1.7.pack.js" />
+    <Content Include="js\jquery-tooltips.js" />
+    <Content Include="js\jquery.bgiframe.js" />
+    <Content Include="js\jquery.dimensions.js" />
+    <Content Include="js\jquery.easy-confirm-dialog.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.tooltip.css" />
+    <Content Include="js\jquery.tooltip.js" />
+    <Content Include="js\screen.css" />
+    <Content Include="LeetCode\LeetCode.html" />
+    <Content Include="ReverseIt.aspx" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
+    <Content Include="stupid.html" />
+    <Content Include="Ticker\crawler.aspx" />
+    <Content Include="Ticker\crawler.js" />
+    <Content Include="Ticker\TickerRender.htm" />
+    <Content Include="Ticker\TickerRender2.htm" />
+    <Content Include="Ticker\Tickers.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="ClientClick.aspx" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\ajaxReturn.aspx.cs">
+      <DependentUpon>ajaxReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\ajaxReturn.aspx.designer.cs">
+      <DependentUpon>ajaxReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CKEdit\CKEdit.aspx.cs">
+      <DependentUpon>CKEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CKEdit\CKEdit.aspx.designer.cs">
+      <DependentUpon>CKEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CKEdit\ckeditor_aspnet_3.6.4\CKEditor.NET\CKEditorConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CKEdit\ckeditor_aspnet_3.6.4\CKEditor.NET\CKEditorControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClientClickAgain.aspx.cs">
+      <DependentUpon>ClientClickAgain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientClickAgain.aspx.designer.cs">
+      <DependentUpon>ClientClickAgain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSCrap\BigO.aspx.cs">
+      <DependentUpon>BigO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSCrap\BigO.aspx.designer.cs">
+      <DependentUpon>BigO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSCrap\BigO.cs" />
+    <Compile Include="DateTimes\DateTimeFun.aspx.cs">
+      <DependentUpon>DateTimeFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DateTimes\DateTimeFun.aspx.designer.cs">
+      <DependentUpon>DateTimeFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enum.cs" />
+    <Compile Include="ExtensionMethodFun\Car.cs" />
+    <Compile Include="ExtensionMethodFun\ExtensionMethods.cs" />
+    <Compile Include="ExtensionMethodFun\ExtensionMethodCrap.aspx.cs">
+      <DependentUpon>ExtensionMethodCrap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionMethodFun\ExtensionMethodCrap.aspx.designer.cs">
+      <DependentUpon>ExtensionMethodCrap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IEnumerable.aspx.cs">
+      <DependentUpon>IEnumerable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IEnumerable.aspx.designer.cs">
+      <DependentUpon>IEnumerable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Assembly1.cs" />
+    <Compile Include="Internal\Assembly1_a.cs" />
+    <Compile Include="Internal\Internal.aspx.cs">
+      <DependentUpon>Internal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Internal\Internal.aspx.designer.cs">
+      <DependentUpon>Internal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyMaster.Master.cs">
+      <DependentUpon>MyMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyMaster.Master.designer.cs">
+      <DependentUpon>MyMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OldASP.aspx.cs">
+      <DependentUpon>OldASP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OldASP.aspx.designer.cs">
+      <DependentUpon>OldASP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReturnStatementFun.aspx.cs">
+      <DependentUpon>ReturnStatementFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReturnStatementFun.aspx.designer.cs">
+      <DependentUpon>ReturnStatementFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReverseIt.aspx.cs">
+      <DependentUpon>ReverseIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReverseIt.aspx.designer.cs">
+      <DependentUpon>ReverseIt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StringBuilderFun.aspx.cs">
+      <DependentUpon>StringBuilderFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StringBuilderFun.aspx.designer.cs">
+      <DependentUpon>StringBuilderFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StringGet.cs" />
+    <Compile Include="TestCSharpAppPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thing.cs" />
+    <Compile Include="Ticker\crawler.aspx.cs">
+      <DependentUpon>crawler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ticker\crawler.aspx.designer.cs">
+      <DependentUpon>crawler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ticker\Tickers.aspx.cs">
+      <DependentUpon>Tickers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ticker\Tickers.aspx.designer.cs">
+      <DependentUpon>Tickers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Validators\Validator.aspx.cs">
+      <DependentUpon>Validator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validators\Validator.aspx.designer.cs">
+      <DependentUpon>Validator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientClick.aspx.cs">
+      <DependentUpon>ClientClick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientClick.aspx.designer.cs">
+      <DependentUpon>ClientClick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService.aspx.cs">
+      <DependentUpon>WebService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebService.aspx.designer.cs">
+      <DependentUpon>WebService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\Wizard.aspx.cs">
+      <DependentUpon>Wizard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wizard\Wizard.aspx.designer.cs">
+      <DependentUpon>Wizard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XML\XMLParse.aspx.cs">
+      <DependentUpon>XMLParse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XML\XMLParse.aspx.designer.cs">
+      <DependentUpon>XMLParse.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\TestCSharpApp.dll" />
+    <Content Include="bin\TestCSharpApp.pdb" />
+    <Content Include="ClientClickAgain.aspx" />
+    <Content Include="DateTimes\DateTimeFun.aspx" />
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="Internal\Internal.aspx" />
+    <Content Include="MyMaster.Master" />
+    <Content Include="obj\Debug\TestCSharpApp.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TestCSharpApp.dll" />
+    <Content Include="obj\Debug\TestCSharpApp.pdb" />
+    <Content Include="OldASP.aspx" />
+    <Content Include="ReturnStatementFun.aspx" />
+    <Content Include="StringBuilderFun.aspx" />
+    <Content Include="Validators\Validator.aspx" />
+    <Content Include="WebService.aspx" />
+    <Content Include="Wizard\Wizard.aspx" />
+    <Content Include="XML\DCT.xml" />
+    <Content Include="XML\DCTTestXml3.xml" />
+    <Content Include="XML\XMLFile1.xml" />
+    <Content Include="XML\XMLFile2.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\XMLFile3.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\XMLFile4.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\XMLParse.aspx" />
+    <Content Include="XSLT\myXSLT.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="CKEdit\ckeditor_aspnet_3.6.4\CKEditor.NET\Properties\" />
+    <Folder Include="Log\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58799</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

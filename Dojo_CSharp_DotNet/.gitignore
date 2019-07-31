@@ -55,4 +55,9 @@ Temporary Items
 .pdb
 .cache
 
+*.dll
+*.pdb
+*.cache
+
+
 
