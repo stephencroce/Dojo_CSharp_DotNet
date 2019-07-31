@@ -1367,6 +1367,7 @@
     <Content Include="HTML\TechnoFucks\Squish438.htm" />
     <Content Include="HTML\TechnoFucks\Squish438a.htm" />
     <Content Include="HTML\TechnoFucks\Squish544.htm" />
+    <Content Include="HTML\UDC\ArraySplit.html" />
     <Content Include="HTML\UDC\selectPickerHacking.html" />
     <Content Include="IEnumerable.aspx" />
     <Content Include="jQueryCrap\jQueryBasicDialog.htm" />

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="theResult"></div>
+</body>
+</html>
+<script language="javascript">
+    var theDirectives = "this is a commment/directive, this is a directive";
+
+    function buildDirectivesList(theDirectives) {
+        var returnVal=[];
+        var arr = theDirectives.split(",");
+        arr.forEach(function (element) {
+            //element = "<div>" + element.trim() + "</div>"
+            returnVal.push("<div>" + element.trim() + "</div>")
+        });        
+        return returnVal.join('');
+    }
+    //buildDirectivesList();
+
+    window.document.getElementById("theResult").innerHTML = buildDirectivesList(theDirectives);
+</script>

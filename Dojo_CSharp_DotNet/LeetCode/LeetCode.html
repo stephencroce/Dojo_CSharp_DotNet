@@ -122,8 +122,10 @@
                     //triVal = returnArray[row - 1, col - 1] + returnArray[row - 1, col];
                     //triVal = returnArray[row - 1, col - 1] + typeof (returnArray[row - 1, col]) === "undefined" ? 0 : returnArray[row - 1, col];                    
                     //triVal = returnArray[row - 2][col - 2] + typeof (returnArray[row - 2][col-1]) === "undefined" ? 0 : returnArray[row - 2][col-1];
-                    triVal = returnArray[row - 2][col - 2] + returnArray[row - 2][col - 1];
-                    triVal = typeof (triVal === "undefined") ? 1 : triVal;
+                    //triVal = returnArray[row - 1][col - 1] + returnArray[row - 1][col];
+                    //triVal = returnArray[row - 1][col - 2] + returnArray[row - 1][col - 2];
+                    triVal = returnArray[row - 2][col - 2] + returnArray[row - 2][col - 1]
+                    triVal = typeof (triVal) === "undefined" ? 1 : triVal;
                     rowArray.push(triVal);           
                 }
                 if (col==row && row == endRow) { //stop the function and return                    
