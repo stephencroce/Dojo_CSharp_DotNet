@@ -8,11 +8,15 @@
     hi i am stupid.
     <div id="myDiv"></div>
     <div id="myDiv2"></div>
+    <div id="myDiv3"></div>
 </body>
 </html>
 <script language="javascript">
+    //https://www.w3schools.com/js/js_function_definition.asp
     var myDiv = window.document.getElementById("myDiv");
     var myDiv2 = window.document.getElementById("myDiv2");
+    var myDiv3 = window.document.getElementById("myDiv3");
+    
     //myDiv.innerHTML = "Yes. I know.";
     var nudnick = function (type) {
         var retVal;
@@ -30,19 +34,24 @@
         return retVal;
     }
     myDiv.innerHTML = nudnick(2);
-
-    
+    //nudnick(2);     this doesn't do anything.
+        
  /**
  * @param {number} numRows
  * @return {number[][]}
  */
     var generate = function (numRows) {
+
+        //numRows == 0 ? numRows = 1 : numRows = numRows;
+        if (numRows == 0) { return [];}
+
         var startRow = 1;
         var startCol = 1;
         var endRow = parseInt(numRows);
         var rowArray = [];
         var returnArray = [];
         var triVal;
+        
 
         var triangle = function (row, col) {
             //base case
@@ -64,7 +73,9 @@
                 rowArray.push(triVal);
             }
             if (col == row && row == endRow) { //stop the function and return                    
-                return returnArray;
+                console.log(JSON.stringify(returnArray));
+                myDiv2.innerHTML = JSON.stringify(returnArray);
+                return returnArray;                                
             }
             else {
                 if (col == row) {
@@ -77,8 +88,8 @@
             }
         }
         triangle(startRow, startCol);
-    };
-    myDiv2.innerHTML = JSON.stringify(generate(3));
-
-
+        return returnArray;
+    };  
+    var test = generate(1);
+    console.log('test is: ' + (JSON.stringify(test)));
 </script>
