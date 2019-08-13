@@ -1,0 +1,50 @@
+﻿<div id="omGuidelinesForAuthors">
+    <div>
+        <a target="_blank" href="http://www.givingsight.org/">
+            <img border="0" vspace="4" alt="" src="/App_Themes/OptometricManagement/images/OGS_Gold.jpg" />
+        </a>
+    </div>
+    <p>
+        <b>A Proud Supporter of Optometry Giving Sight </b>
+    </p>
+</div>
+<div id="omHeader">
+    <div style="padding-top: 10px; padding-right: 15px;" id="logo">
+        <a href="/home.aspx">
+            <img alt="Optometric Management" src="http://www.optometric.com/images/om/main_logo.gif" />
+        </a>
+    </div>
+    <div id="quote">
+        &nbsp;
+    </div>
+    <div id="search">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" id="searchterm" name="searchterm" />
+                    </td>
+                    <td>
+                        <input type="button" class="smallbtn" value="search" onclick="javascript:GoSearch()" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="dtSearch.aspx?mode=advanced">Advanced Search</a></div>
+    <div id="utilityLinks">
+        <div class="largebtn">
+            <a href="articleFeedbackIdeas.aspx">Article Feedback &amp; Ideas</a></div>
+        <a href="http://www.visioncareprofessional.com/">
+            <img alt="wolters kluwer" src="/App_Themes/RetinalPhysician/Images/wolters-kluwer.jpg" /></a></div>
+</div>
+<script type="text/javascript">
+    function GoSearch() {
+
+        var search = document.getElementById('searchterm');
+        var v = document.getElementById('__VIEWSTATE');
+        if (v)
+            v.parentNode.removeChild(v);
+
+        window.top.location.href = "http://cls.visioncaredev.com/dtSearch.aspx?mode=basic&searchterm=" + search.value;
+    }
+</script>

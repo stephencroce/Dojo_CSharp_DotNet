@@ -1,0 +1,42 @@
+﻿<div id="header">
+    <div style="padding-top: 46px; padding-right: 15px; padding-left: 8px;" id="logo">
+        <a href="/home.aspx">
+            <img width="220px" src="/content/images/OM_LOGO.jpg" id="omLogo" alt="Optometric Management" /></a></div>
+    <div id="quote">
+        <span class="blue" style="position: relative; left: 40px;">The Leading<br />
+            Practice Management<br />
+            Resource for Optometry</span></div>
+    <div id="omSearch">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" id="searchterm" name="searchterm" />
+                    </td>
+                    <td>
+                        <input type="button" class="smallbtn" value="search" onclick="javascript:GoSearch()" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--
+<a href="dtSearch.aspx?mode=advanced">Advanced Search</a>
+-->
+    </div>
+    <div id="utilityLinks">
+        <div class="largebtn">
+            <a href="articleFeedbackIdeas.aspx">Article Feedback &amp; Ideas</a></div>
+        <a href="http://www.visioncareprofessional.com/">
+            <img src="/App_Themes/RetinalPhysician/Images/wolters-kluwer.jpg" alt="wolters kluwer" /></a></div>
+</div>
+<script type="text/javascript">
+    function GoSearch() {
+
+        var search = document.getElementById('searchterm');
+        var v = document.getElementById('__VIEWSTATE');
+        if (v)
+            v.parentNode.removeChild(v);
+
+        window.top.location.href = "/dtSearch.aspx?mode=basic&searchterm=" + search.value;
+    }
+</script>
