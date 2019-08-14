@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dojo_CSharpDotNet", "Dojo_CSharp_DotNet\Dojo_CSharpDotNet.csproj", "{FF5F07AC-D26E-4FC4-AFC4-A1C6C0A9EB0C}"
-
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCSharpApp", "Dojo_CSharp_DotNet\TestCSharpApp.csproj", "{930E1BF9-B6A8-4768-9602-9DA26DC5A27F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,7 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
 		{930E1BF9-B6A8-4768-9602-9DA26DC5A27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{930E1BF9-B6A8-4768-9602-9DA26DC5A27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{930E1BF9-B6A8-4768-9602-9DA26DC5A27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
