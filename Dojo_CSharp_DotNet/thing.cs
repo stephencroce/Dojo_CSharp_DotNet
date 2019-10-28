@@ -12,7 +12,7 @@ namespace TestCSharpApp
 {
     public class thing
     {
-        
+        //git stash test
         public string Name { get; set; }
         
             
