@@ -199,7 +199,8 @@
             }
             return linkedList;
         };        
-        
+
+        var temp;
         var reverseList = function (head) {
             //can you do this with swaps like so?
             //12345
@@ -213,9 +214,8 @@
             //43521
             //45321
             //54321          
-            var temp;
+            //var temp;
             
-
             if (head.val < head.next.val) {
                 temp = head.val;
                 head.val = head.next.val;
@@ -223,12 +223,9 @@
                 reverseList(head);
             }
             else {
-                temp = head.next.val;
-
+                temp = head;
             }
-
             return head;
-
         };
         var theInput = [1, 2, 3, 4, 5];
         var theLL = generateLL(theInput);
