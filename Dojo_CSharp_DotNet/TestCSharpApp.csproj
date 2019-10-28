@@ -1336,6 +1336,8 @@
     <Content Include="ExtensionMethodFun\ExtensionMethodCrap.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HTMLPage2.htm" />
+    <Content Include="HTML\Amazon.html" />
+    <Content Include="HTML\Amazon_Owlex.html" />
     <Content Include="HTML\CacheBuster.htm" />
     <Content Include="HTML\CEI\ChubbLetterSampleNTSVR76BOptimized.html" />
     <Content Include="HTML\TechnoFucks\CLSCoverImageTransformation.htm" />
