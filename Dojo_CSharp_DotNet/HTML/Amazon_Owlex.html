@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Amazon_Owlex</title>
+</head>
+<body>
+Amazon_Owlex
+</body>
+</html>
+<script language="javascript">
+    var endHouse = 0;
+    var houseOne = prompt("House 1: Active or Inactive? ");
+    var houseTwo = prompt("House 2: Active or Inactive? ");
+    var houseThree = prompt("House 3: Active or Inactive? ");
+    var houseFour = prompt("House 4: Active or Inactive? ");
+    var houseFive = prompt("House 5: Active or Inactive? ");
+    var houseSix = prompt("House 6: Active or Inactive? ");
+    var houseSeven = prompt("House 7: Active or Inactive? ");
+    var houseEight = prompt("House 8: Active or Inactive? ");
+    var numDays = prompt("How many days?: ");
+
+    var findLastOne = houseOne;
+    var findLastTwo = houseTwo;
+    var findLastThree = houseThree;
+    var findLastFour = houseFour;
+    var findLastFive = houseFive;
+    var findLastSix = houseSix;
+    var findLastSeven = houseSeven;
+    var findLastEight = houseEight;
+
+    var ad = 0;
+
+    function start() {
+        for (var i = 0; i < numDays; i++) {
+            lastSet();
+            reset();
+            //println(houseOne + " " + houseTwo + " " + houseThree + " " + houseFour + " " + houseFive + " " + houseSix + " " + houseSeven);
+            window.alert(houseOne + " " + houseTwo + " " + houseThree + " " + houseFour + " " + houseFive + " " + houseSix + " " + houseSeven + " " + houseEight);
+        }
+    }
+
+    function reset() {
+        houseOne = findLastOne;
+        houseTwo = findLastTwo;
+        houseThree = findLastThree;
+        houseFour = findLastFour;
+        houseFive = findLastFive;
+        houseSix = findLastSix;
+        houseSeven = findLastSeven;
+        houseEight = findLastEight;
+    }
+
+    function lastSet() {
+        lastOne();
+        lastTwo();
+        lastThree();
+        lastFour();
+        lastFive();
+        lastSix();
+        lastSeven();
+        lastEight();
+    }
+
+    function lastOne() {
+        findLastOne = (endHouse == houseTwo) ? "0" : "1";
+    }
+
+    function lastTwo() {
+        findLastTwo = (houseOne == houseThree) ? "0" : "1";
+    }
+
+    function lastThree() {
+        findLastThree = (houseTwo == houseFour) ? "0" : "1";
+    }
+
+    function lastFour() {
+        findLastFour = (houseThree == houseFive) ? "0" : "1";
+    }
+
+    function lastFive() {
+        findLastFive = (houseFour == houseSix) ? "0" : "1";
+    }
+
+    function lastSix() {
+        findLastSix = (houseFive == houseSeven) ? "0" : "1";
+    }
+
+    function lastSeven() {
+        findLastSeven = (houseSix == houseEight) ? "0" : "1";
+    }
+
+    function lastEight() {
+        findLastEight = (houseSeven == endHouse) ? "0" : "1";
+    }
+    start();
+</script>
