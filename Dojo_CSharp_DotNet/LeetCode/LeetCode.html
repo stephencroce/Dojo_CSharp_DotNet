@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -154,6 +154,108 @@
         //console.log(JSON.stringify(generateTriangle(1)));
         //console.log("end Pascals Triangle");
 
+    </script>
+    <script>
+        //Reverse a singly linked list.
+
+        //    Example:
+
+        //Input: 1 -> 2 -> 3 -> 4 -> 5 -> NULL
+        //Output: 5 -> 4 -> 3 -> 2 -> 1 -> NULL
+        //Follow up:
+
+        //A linked list can be reversed either iteratively or recursively. Could you implement both ?
+
+        /**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+        /**
+         * @param {ListNode} head
+         * @return {ListNode}
+         */
+         function ListNode(val) {
+            this.val = val;
+            this.next = null;
+        }
+
+
+
+        //create a linked list data structure with N nodes:
+        var generateLL = function (inputArray, linkedList, counter) {
+            if (typeof (linkedList) === "undefined") {
+                counter = 0;
+                linkedList = new ListNode(inputArray[counter]);
+                counter++; //(1)
+                linkedList.next = new ListNode(inputArray[counter]);
+            }
+            if (counter <= inputArray.length - 1) {
+                linkedList.next = new ListNode(inputArray[counter]);
+                counter++;
+                generateLL(inputArray, linkedList.next, counter);
+            }
+            return linkedList;
+        };        
+        
+        var reverseList = function (head) {
+            //can you do this with swaps like so?
+            //12345
+            //21345
+            //23145
+            //32145
+            //32415
+            //34215
+            //43215
+            //43251
+            //43521
+            //45321
+            //54321          
+            var temp;
+            
+
+            if (head.val < head.next.val) {
+                temp = head.val;
+                head.val = head.next.val;
+                head.next.val = temp;
+                reverseList(head);
+            }
+            else {
+                temp = head.next.val;
+
+            }
+
+            return head;
+
+        };
+        var theInput = [1, 2, 3, 4, 5];
+        var theLL = generateLL(theInput);
+        console.log('the original LL was: ' + JSON.stringify(theLL));
+        var theRll = reverseList(theLL);
+        console.log('the reversed LL is : ' + JSON.stringify(theRll));
+        
+
+    </script>
+    <script>
+        //how the hell is this an example of an inverse function.  Inverse function think Farhenheit to Celcius conversion.  It has to have an inverse and go both ways for it to be elible for 
+        //to be solved by an inverse function.  This seems way too contrived
+        function mostExpensiveCarYouCanAfford(numPaymentsLeft, maxMonthly, currentMonthly, termMonths, tradeInValue) {            
+            //what's the most expensive car I can purchase?
+            var maxValue;            
+            var rawValue = maxMonthly * termMonths;
+            var increasedValue = rawValue + tradeInValue;
+            var residual = currentMonthly * numPaymentsLeft;
+            maxValue = increasedValue - residual;
+            return maxValue;
+        }
+        var numPaymentsLeft = 36;
+        var maxMonthly = 300;
+        var currentMonthly = 260;
+        var termMonths = 5*12;
+        var tradeInValue = 4000;
+        console.log("the most expensive car you can afford is: " + mostExpensiveCarYouCanAfford(numPaymentsLeft, maxMonthly, currentMonthly, termMonths, tradeInValue))
     </script>
 </body>
 </html>
