@@ -9,8 +9,19 @@
         this is the leetcode javascript dojo workspace::
     </div>
     <div>
-        <button onclick="generateTriangle(window.document.getElementById('txtNumRows').value);">Do Triangle</button>
-        <input type="text" id="txtNumRows" />
+        <div>
+            <button onclick="generateTriangle(window.document.getElementById('txtNumRows').value);">Do Triangle</button>
+            <input type="text" id="txtNumRows" />
+        </div>
+        <div>
+            <button onclick="">Create Linked List</button>
+            <input type="text" id="txtNumNodes" />
+            <input type="checkbox" name="chkReverseIt" value="test">reverse it.<br>
+        </div>
+        <div>
+            <button onclick="climbStairs(window.document.getElementById('txtNumStairs').value);">Climb Stairs</button>
+            <input type="text" id="txtNumStairs" />
+        </div>
         <div id="answerBox" style="border:dashed orange 1px; width:400px; height:400px;">
 
         </div>
@@ -202,7 +213,7 @@
 
         var temp;
         var reverseList = function (head) {
-            //can you do this with swaps like so?
+            //can you do this with swaps like so?   meh.. too hard apparently...
             //12345
             //21345
             //23145
@@ -215,23 +226,78 @@
             //45321
             //54321          
             //var temp;
-            
-            if (head.val < head.next.val) {
-                temp = head.val;
-                head.val = head.next.val;
-                head.next.val = temp;
-                reverseList(head);
+            //I couldn't really figure this out.  So heres the goddam solution. One thing to notice is it's overall simplicity.  What I was trying was way too complex and messy.
+            //Steppping through it still doesn't make much sense.  whatever the fuck.
+            //https://leetcode.com/problems/reverse-linked-list/solution/
+
+            //While you are traversing the list, change the current node's next pointer to point to its previous element. 
+            //Since a node does not have reference to its previous node, you must store its previous element beforehand.
+            //You also need another pointer to store the next node before changing the reference.
+            //Do not forget to return the new head reference at the end!
+
+            let prev = null;
+            let curr = head;
+
+            while (curr != null)
+            {
+                let nextTemp = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = nextTemp;
             }
-            else {
-                temp = head;
-            }
-            return head;
+            return prev;            
+
+            //Complexity analysis
+
+            //Time complexity: O(n)O(n).Assume that nn is the list's length, the time complexity is O(n)O(n).
+
+            //Space complexity: O(1)O(1).
         };
+
+        var reverseListRecursive = function (head) {
+            //The recursive version is slightly trickier and the key is to work backwards.
+            //Assume that the rest of the list had already been reversed, now how do I reverse the front part ? 
+            //Let's assume the list is: n1 → … → nk-1 → nk → nk+1 → … → nm → Ø
+            //Assume from node nk + 1 to nm had been reversed and you are at node nk.
+            //    n1 → … → nk - 1 → nk → nk + 1 ← … ← nm
+
+            //We want nk + 1’s next node to point to nk.
+
+           //     So,
+
+           //     nk.next.next = nk;
+
+          //  Be very careful that n1's next must point to Ø. If you forget about this, your linked list has a cycle in it. This bug could be caught if you test your code with a linked list of size 2.
+
+ 
+            if (head == null || head.next == null) {
+                return head;
+            }
+            let p = reverseList(head.next);
+            head.next.next = head;
+            head.next = null;
+            return p;
+
+            //Complexity analysis
+
+            //Time complexity: O(n)O(n).Assume that nn is the list's length, the time complexity is O(n)O(n).
+
+            //Space complexity: O(n)O(n).The extra space comes from implicit stack space due to recursion.The recursion could go up to nn levels deep.
+
+        };
+
+
+
         var theInput = [1, 2, 3, 4, 5];
+        var theInput2 = [1, 2, 3, 4, 5];
         var theLL = generateLL(theInput);
+        var theLL2 = generateLL(theInput2);
         console.log('the original LL was: ' + JSON.stringify(theLL));
         var theRll = reverseList(theLL);
-        console.log('the reversed LL is : ' + JSON.stringify(theRll));
+        console.log('the reversed LL (iterative) is : ' + JSON.stringify(theRll));
+        var theRll_R = reverseListRecursive(theLL2);
+        console.log('the reversed LL (recursive) is : ' + JSON.stringify(theRll_R));
+
         
 
     </script>
@@ -253,6 +319,49 @@
         var termMonths = 5*12;
         var tradeInValue = 4000;
         console.log("the most expensive car you can afford is: " + mostExpensiveCarYouCanAfford(numPaymentsLeft, maxMonthly, currentMonthly, termMonths, tradeInValue))
+    </script>
+    <script>
+    //https://leetcode.com/explore/learn/card/recursion-i/255/recursion-memoization/1662/
+    // Climbing Stairs
+
+    //You are climbing a stair case.It takes n steps to reach to the top.
+
+    //Each time you can either climb 1 or 2 steps.In how many distinct ways can you climb to the top ?
+
+    //Note : Given n will be a positive integer.
+
+    // Example 1:
+    //        Input: 2
+    //        Output: 2
+    //        Explanation: There are two ways to climb to the top.
+    //          1.  1 step + 1 step
+    //          2.  2 steps
+
+
+    //Example 2:
+    //        Input: 3
+    //        Output: 3
+    //        Explanation: There are three ways to climb to the top.
+    //          1. 1 step + 1 step + 1 step
+    //          2. 1 step + 2 steps
+    //          3. 2 steps + 1 step
+
+    //        Hint:
+    //        To reach nth step, what could have been your previous steps ? (Think about the step sizes)
+
+        /**
+         * @param {number} n
+         * @return {number}
+         */
+        var climbStairs = function (n) {
+
+            var answerBox = window.document.getElementById("answerBox");
+            answerBox.innerHTML = "begin stairclimb :: ";
+
+            answerBox.innerHTML = answerBox.innerHTML + JSON.stringify(n);
+            answerBox.innerHTML = answerBox.innerHTML + " :: end stairclimb";
+
+        };
     </script>
 </body>
 </html>
