@@ -50,3 +50,13 @@ C:\Users\scroce\Documents\git\TestCSharpApp\TestCSharpApp\bin\ClassLibraryHack.d
 C:\Users\scroce\Documents\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.csproj.CoreCompileInputs.cache
 C:\Users\scroce\Documents\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.csproj.CopyComplete
 C:\Users\scroce\Documents\git\TestCSharpApp\TestCSharpApp\obj\Debug\TestCSharpApp.csprojAssemblyReference.cache
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\bin\TestCSharpApp.dll.config
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\bin\TestCSharpApp.dll
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\bin\TestCSharpApp.pdb
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\bin\Ajax.dll
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\bin\ClassLibraryHack.dll
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\obj\Debug\TestCSharpApp.csprojAssemblyReference.cache
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\obj\Debug\TestCSharpApp.csproj.CoreCompileInputs.cache
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\obj\Debug\TestCSharpApp.csproj.CopyComplete
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\obj\Debug\TestCSharpApp.dll
+C:\Users\scroce\Documents\git\Dojo_CSharp_DotNet\Dojo_CSharp_DotNet\obj\Debug\TestCSharpApp.pdb
